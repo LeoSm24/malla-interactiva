@@ -22,9 +22,10 @@
     {
       "id": "psicologia",
       "nombre": "Psicología",
-      "planPorDefecto": "antiguo",
+      "planPorDefecto": "nuevo",
       "planes": [
-        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/psicologia/plan-antiguo.json" }
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/psicologia/plan-antiguo.json" },
+        { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/psicologia/plan-nuevo.json" }
       ]
     }
   ]
