@@ -16,15 +16,18 @@ export function crearModelo(plan) {
     });
   });
 
-  // Regla de electivas: requieren TODAS las materias hasta cierto semestre
-  const hasta = reglas.electivas?.requiereHastaSemestre;
-  if (hasta) {
-    const previas = Object.values(materias).filter(m => m.semestre < hasta && m.tipo !== "electiva").map(m => m.id);
-    Object.values(materias).filter(m => m.tipo === "electiva").forEach(m => {
-      m.requiere = previas;
-      m.porRegla = true;
-    });
-  }
+  // Reglas por tipo: p. ej. electivas y prácticas requieren TODAS las materias hasta cierto semestre.
+  // Se suman a los prerrequisitos propios de la materia (ej. Práctica II también pide Práctica I).
+  const porTipo = reglas.requiereHastaSemestre || {};
+  Object.values(materias).forEach(m => {
+    m.directos = [...m.requiere];
+    const hasta = porTipo[m.tipo];
+    if (!hasta) return;
+    const previas = Object.values(materias).filter(x => x.semestre < hasta && !porTipo[x.tipo]).map(x => x.id);
+    m.requiere = [...new Set([...previas, ...m.directos])];
+    m.porRegla = true;
+    m.hastaSemestre = hasta;
+  });
 
   // Validación: avisa en consola si un JSON pide una materia que no existe
   Object.values(materias).forEach(m => m.requiere.forEach(r => {

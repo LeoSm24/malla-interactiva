@@ -9,8 +9,9 @@
       "MDG-01": 4,
       "MDG-02": 2
     },
-    "electivas": {
-      "requiereHastaSemestre": 5
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
     }
   },
   "semestres": [
@@ -116,8 +117,8 @@
     {
       "nombre": "X",
       "materias": [
-        { "id": "PRA-01", "nombre": "Práctica Profesional I", "requiere": [] },
-        { "id": "PRA-02", "nombre": "Práctica Profesional II", "requiere": [ "PRA-01" ] },
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "tipo": "practica", "requiere": [ "PRA-01" ] },
         { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
         { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
       ]

@@ -94,7 +94,9 @@ function alternar(id) {
   if (st === "locked") {
     repetir(tarjeta(grid, id), "shake");
     const faltan = modelo.materias[id].requiere.filter(r => !aprobadas.has(r));
-    if (modelo.materias[id].porRegla) aviso(`🔒 Las electivas requieren todo hasta el semestre ${modelo.plan.reglas.electivas.requiereHastaSemestre} · te faltan <b>${faltan.length} materias</b>`, true);
+    const m = modelo.materias[id];
+    if (m.porRegla && faltan.some(r => !m.directos.includes(r)))
+      aviso(`🔒 ${m.nombre} requiere todo hasta el semestre ${m.hastaSemestre} · te faltan <b>${faltan.length} materias</b>`, true);
     else aviso(`🔒 Primero aprueba: <b>${faltan.map(nombre).join(", ")}</b>`, true);
   } else if (st === "available") {
     const nuevas = aprobar(modelo, aprobadas, id);

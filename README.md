@@ -61,7 +61,7 @@ Listo: aparece en el selector de carreras. Si tiene un solo plan, los botones de
 | `mostrarCodigos` | `true` muestra el código de la materia; `false` muestra los créditos |
 | `reglas.mesesPorMateria` | Meses que dura cada materia (por defecto 1) |
 | `reglas.duraciones` | Materias con otra duración, ej. `{ "MDG-01": 4 }` |
-| `reglas.electivas.requiereHastaSemestre` | Las electivas se habilitan al aprobar todo hasta ese semestre |
+| `reglas.requiereHastaSemestre` | Por tipo de materia, hasta qué semestre hay que aprobar todo. Ej. `{ "electiva": 5, "practica": 5 }` |
 | `semestres[].nombre` | `"I"`, `"II"`… se muestra como "SEMESTRE I". Otro texto (ej. `"Grado"`) se muestra tal cual |
 
 Cada materia:
@@ -72,7 +72,8 @@ Cada materia:
 
 - `id`: único dentro del plan. Es lo que se usa en `requiere`.
 - `requiere`: lista de `id` que hay que aprobar antes.
-- `"tipo": "electiva"`: la materia sigue la regla de electivas (no necesita `requiere`).
+- `"tipo": "electiva"` o `"tipo": "practica"`: la materia sigue la regla `requiereHastaSemestre` de su tipo.
+  Puede tener además su propio `requiere` (ej. Práctica II también pide Práctica I).
 - Para nombres muy largos puedes usar `­` (guion opcional), ej. `"Emprende­durismo"`.
 
 > Si escribes mal un `id` en `requiere`, la consola del navegador (F12) muestra un aviso

@@ -86,28 +86,27 @@ export function enfocar(grid, svg, info, modelo, aprobadas, id) {
   }
 
   const m = modelo.materias[id];
-  const habilita = m.habilita.filter(h => !modelo.materias[h].porRegla); // sin las líneas a electivas
+  // Solo se dibujan los prerrequisitos directos (no las ~30 líneas de una regla por semestre)
+  const habilita = m.habilita.filter(h => modelo.materias[h].directos.includes(id));
   tarjeta(grid, id).classList.add("is-focus");
-  if (!m.porRegla) m.requiere.forEach(r => tarjeta(grid, r).classList.add("is-pre"));
+  m.directos.forEach(r => tarjeta(grid, r).classList.add("is-pre"));
   habilita.forEach(h => tarjeta(grid, h).classList.add("is-next"));
 
   svg.innerHTML =
-    (m.porRegla ? "" : m.requiere.map(r => `<path class="pre" d="${curva(grid, modelo, r, id)}"/>`).join("")) +
+    m.directos.map(r => `<path class="pre" d="${curva(grid, modelo, r, id)}"/>`).join("") +
     habilita.map(h => `<path class="next" d="${curva(grid, modelo, id, h)}"/>`).join("");
 
-  let necesita;
+  const partes = [];
   if (m.porRegla) {
-    const ok = m.requiere.filter(r => aprobadas.has(r)).length;
-    const hasta = modelo.plan.reglas.electivas.requiereHastaSemestre;
-    necesita = `<span class="${ok === m.requiere.length ? "p" : "x"}">todas las materias hasta el semestre ${hasta} (${ok}/${m.requiere.length} aprobadas)</span>`;
-  } else if (m.requiere.length) {
-    necesita = m.requiere.map(r => {
-      const ok = aprobadas.has(r);
-      return `<span class="${ok ? "p" : "x"}">${ok ? "✓" : "✗"} ${modelo.materias[r].nombre}</span>`;
-    }).join(", ");
-  } else {
-    necesita = "nada";
+    const previas = m.requiere.filter(r => !m.directos.includes(r));
+    const ok = previas.filter(r => aprobadas.has(r)).length;
+    partes.push(`<span class="${ok === previas.length ? "p" : "x"}">todas las materias hasta el semestre ${m.hastaSemestre} (${ok}/${previas.length} aprobadas)</span>`);
   }
+  m.directos.forEach(r => {
+    const ok = aprobadas.has(r);
+    partes.push(`<span class="${ok ? "p" : "x"}">${ok ? "✓" : "✗"} ${modelo.materias[r].nombre}</span>`);
+  });
+  const necesita = partes.join(", ") || "nada";
   const habilitaTxt = habilita.length ? habilita.map(h => modelo.materias[h].nombre).join(", ") : "ninguna materia";
   info.innerHTML = `<strong>${m.nombre}</strong><span>Necesita: ${necesita}</span><span class="n">Habilita: ${habilitaTxt}</span>`;
 }
