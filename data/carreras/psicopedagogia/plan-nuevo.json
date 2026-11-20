@@ -1,0 +1,125 @@
+{
+  "carrera": "Psicopedagogía",
+  "plan": "Malla nueva",
+  "descripcion": "Plan nuevo",
+  "mostrarCodigos": false,
+  "areas": [
+    { "id": "cli", "nombre": "Clínica Psicopedagógica", "color": "#dfcbe4" },
+    { "id": "edu", "nombre": "Educativa", "color": "#fae8b8" },
+    { "id": "tec", "nombre": "Tecnológica e Investigación", "color": "#c7e5c9" },
+    { "id": "emp", "nombre": "Empresarial", "color": "#fed5b7" },
+    { "id": "com", "nombre": "Comunitaria", "color": "#c1e7f2" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-FNE", "nombre": "Fundamentos de Neurociencia", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-TPS", "nombre": "Teorías Psicopedagógicas", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-INF", "nombre": "Informática Educativa", "area": "tec", "ht": 40, "hp": 40, "cr": 4, "requiere": [] },
+        { "id": "N-IPP", "nombre": "Introducción a la Psicopedagogía", "area": "cli", "ht": 50, "hp": 70, "cr": 6, "requiere": [] },
+        { "id": "N-PCR", "nombre": "Pensamiento Crítico y Redacción Académica", "area": "com", "ht": 40, "hp": 40, "cr": 4, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "N-IAD", "nombre": "Investigación y Análisis de Datos", "area": "tec", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "N-MIC" ] },
+        { "id": "N-PNP", "nombre": "Procesos Neuropsicológicos", "area": "cli", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-FNE" ] },
+        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "area": "edu", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-LOR", "nombre": "Liderazgo y Oratoria", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-INF" ] },
+        { "id": "N-LGE", "nombre": "Legislación y Gestión Educativa Nacional e Internacional", "area": "edu", "ht": 40, "hp": 40, "cr": 4, "requiere": [ "N-IPP" ] },
+        { "id": "N-EAD", "nombre": "Educación Ambiental y Desarrollo Sostenible", "area": "com", "ht": 40, "hp": 40, "cr": 4, "requiere": [ "N-PCR" ] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "N-RDE", "nombre": "Recursos Digitales para la Enseñanza", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-IAD" ] },
+        { "id": "N-DH1", "nombre": "Psicología del Desarrollo Humano I", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PNP" ] },
+        { "id": "N-NAA", "nombre": "Neurociencia Aplicada al Aprendizaje", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PNP" ] },
+        { "id": "N-PPO", "nombre": "Psicopedagogía Organizacional", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-LOR" ] },
+        { "id": "N-EIN", "nombre": "Educación Inclusiva", "area": "edu", "ht": 50, "hp": 50, "cr": 5, "requiere": [ "N-LGE" ] },
+        { "id": "N-FEA", "nombre": "Fundamentos del Proceso Enseñanza-Aprendizaje", "area": "edu", "ht": 50, "hp": 70, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "N-GEV", "nombre": "Gestión y Creación de Entornos Virtuales de Aprendizaje", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-RDE" ] },
+        { "id": "N-DH2", "nombre": "Psicología del Desarrollo Humano II", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DH1" ] },
+        { "id": "N-TND", "nombre": "Trastornos del Neurodesarrollo", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-NAA" ] },
+        { "id": "N-GPC", "nombre": "Gestión de Procesos de Capacitación Empresarial", "area": "emp", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-PPO" ] },
+        { "id": "N-DEC", "nombre": "Diseño y Evaluación Curricular", "area": "edu", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FEA" ] },
+        { "id": "N-DAB", "nombre": "Didáctica de los Aprendizajes Básicos Instrumentales", "area": "edu", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-FEA" ] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "N-PSM", "nombre": "Psicometría", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-DH2" ] },
+        { "id": "N-PSA", "nombre": "Psicopedagogía en Salud", "area": "cli", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DH2" ] },
+        { "id": "N-PPA", "nombre": "Psicopatología", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-TND" ] },
+        { "id": "N-EPT", "nombre": "Educación para el Desarrollo del Potencial y el Talento", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-EIN" ] },
+        { "id": "N-TAC", "nombre": "Taller de Adaptaciones Curriculares", "area": "edu", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DEC" ] },
+        { "id": "N-EPS", "nombre": "Evaluación Psicopedagógica", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-DAB" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "N-ENP", "nombre": "Evaluación Neuropsicopedagógica", "area": "cli", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-PSM" ] },
+        { "id": "N-IPS", "nombre": "Intervención Psicopedagógica", "area": "edu", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PSA" ] },
+        { "id": "N-PFO", "nombre": "Psicopedagogía Forense", "area": "cli", "ht": 50, "hp": 50, "cr": 5, "requiere": [ "N-PPA" ] },
+        { "id": "N-ITA", "nombre": "Intervención en Trastornos del Aprendizaje y TDAH", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TND" ] },
+        { "id": "N-OPR", "nombre": "Orientación Profesional", "area": "emp", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-GPC" ] },
+        { "id": "N-OVO", "nombre": "Orientación Vocacional", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-EPS" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "N-DPS", "nombre": "Diagnóstico Psicopedagógico", "area": "cli", "ht": 50, "hp": 50, "cr": 5, "requiere": [ "N-ENP" ] },
+        { "id": "N-TIP", "nombre": "Taller de Investigación Psicopedagógica", "area": "tec", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-PFO" ] },
+        { "id": "N-NTD", "nombre": "Neuroleadership y Toma de Decisiones en Equipos", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-OPR" ] },
+        { "id": "N-GPI", "nombre": "Gestión de Proyectos con Impacto Social", "area": "com", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-OPR" ] },
+        { "id": "N-PES", "nombre": "Psicopedagogía en la Educación Superior", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TAC" ] },
+        { "id": "N-IOR", "nombre": "Intervención Organizacional", "area": "com", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-EAD" ] }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "N-LIT", "nombre": "Laboratorio de Innovación y Tecnología Educativa", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-GEV" ] },
+        { "id": "N-ITC", "nombre": "Intervención Psicopedagógica en Trastornos del Comportamiento", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-DPS" ] },
+        { "id": "N-SPM", "nombre": "Sistemas de Planificación, Monitoreo y Evaluación", "area": "com", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-GPI" ] },
+        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "area": "emp", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-OPR" ] },
+        { "id": "N-EL1", "nombre": "Electiva 1", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" },
+        { "id": "N-EL2", "nombre": "Electiva 2", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}
