@@ -4,9 +4,9 @@
    - Maneja los selectores de carrera y plan
    - Conecta los clics con las reglas y el dibujo
    ========================================================= */
-import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=10";
-import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=10";
-import { dibujarMalla, dibujarLeyenda, colorArea, pintarEstados, enfocar, tarjeta } from "./malla.js?v=10";
+import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=11";
+import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=11";
+import { dibujarMalla, dibujarLeyenda, colorArea, pintarEstados, enfocar, tarjeta } from "./malla.js?v=11";
 
 const $ = id => document.getElementById(id);
 const grid = $("grid"), svg = $("links"), info = $("info");

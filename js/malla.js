@@ -4,7 +4,7 @@
    - Colores según estado
    - Líneas de conexión al pasar el mouse
    ========================================================= */
-import { estado } from "./reglas.js?v=10";
+import { estado } from "./reglas.js?v=11";
 
 const ICONOS = {
   locked: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
@@ -19,8 +19,7 @@ const tituloSemestre = nombre => /^[IVXL]+$/.test(nombre) ? `SEMESTRE ${nombre}`
 /* Dibuja todas las columnas y tarjetas de un plan */
 export function dibujarMalla(grid, modelo) {
   grid.querySelectorAll(".col").forEach(c => c.remove());
-  grid.style.gridTemplateColumns = `repeat(${modelo.plan.semestres.length}, minmax(140px, 1fr))`;
-  grid.style.minWidth = `${modelo.plan.semestres.length * 158}px`;
+  grid.style.setProperty("--cols", modelo.plan.semestres.length); // columnas = semestres (+ Grado)
 
   const colorDe = Object.fromEntries((modelo.plan.areas || []).map(a => [a.id, a.color]));
 
