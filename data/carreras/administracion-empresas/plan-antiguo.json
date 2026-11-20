@@ -1,0 +1,130 @@
+{
+  "carrera": "Administración de Empresas",
+  "plan": "Malla antigua",
+  "descripcion": "Modalidad semipresencial · Plan anterior",
+  "mostrarCodigos": true,
+  "areas": [
+    { "id": "apr", "nombre": "Aprender a Aprender", "color": "#dfbcb8" },
+    { "id": "cua", "nombre": "Cuantitativa", "color": "#dac6ad" },
+    { "id": "con", "nombre": "Contabilidad", "color": "#cedb71" },
+    { "id": "fin", "nombre": "Finanzas", "color": "#f5b2d1" },
+    { "id": "ges", "nombre": "Gestión Administrativa", "color": "#a3d2ae" },
+    { "id": "eco", "nombre": "Economía", "color": "#fde2cd" },
+    { "id": "mkt", "nombre": "Marketing", "color": "#d5d5d5" },
+    { "id": "inv", "nombre": "Investigación", "color": "#bbcae1" },
+    { "id": "leg", "nombre": "Legal", "color": "#d0d6ba" },
+    { "id": "lid", "nombre": "Liderazgo", "color": "#f2ea95" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "LIN-0150", "nombre": "Lingüística", "area": "apr", "cr": 5, "requiere": [] },
+        { "id": "MAT-0100", "nombre": "Fundamentos de Matemáticas", "area": "cua", "cr": 6, "requiere": [] },
+        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "area": "inv", "cr": 5, "requiere": [] },
+        { "id": "ADM-0100", "nombre": "Administración I", "area": "ges", "cr": 5, "requiere": [] },
+        { "id": "ECO-0100", "nombre": "Introducción a la Economía", "area": "eco", "cr": 5, "requiere": [] },
+        { "id": "CPA-0100", "nombre": "Contabilidad Empresarial I", "area": "con", "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "MAT-0120", "nombre": "Cálculo I", "area": "cua", "cr": 6, "requiere": [ "MAT-0100" ] },
+        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "area": "cua", "cr": 5, "requiere": [ "MAT-0100" ] },
+        { "id": "ADM-0200", "nombre": "Investigación de Mercado I", "area": "inv", "cr": 7, "requiere": [ "INV-0100" ] },
+        { "id": "ADM-0110", "nombre": "Administración II", "area": "ges", "cr": 5, "requiere": [ "ADM-0100" ] },
+        { "id": "ECO-0110", "nombre": "Microeconomía I", "area": "eco", "cr": 5, "requiere": [ "ECO-0100" ] },
+        { "id": "CPA-0110", "nombre": "Contabilidad Empresarial II", "area": "con", "cr": 6, "requiere": [ "CPA-0100" ] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "area": "lid", "cr": 5, "requiere": [] },
+        { "id": "MAT-0210", "nombre": "Estadística Inferencial", "area": "cua", "cr": 5, "requiere": [ "MAT-0200" ] },
+        { "id": "ADM-0201", "nombre": "Investigación de Mercado II", "area": "inv", "cr": 7, "requiere": [ "ADM-0200" ] },
+        { "id": "ADM-0120", "nombre": "Administración para la Toma de Decisiones", "area": "ges", "cr": 6, "requiere": [ "ADM-0110" ] },
+        { "id": "ECO-0120", "nombre": "Microeconomía II", "area": "eco", "cr": 5, "requiere": [ "ECO-0110" ] },
+        { "id": "CPA-0200", "nombre": "Contabilidad de Costos I", "area": "con", "cr": 6, "requiere": [ "CPA-0110" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "CPA-0300", "nombre": "Tributación Aplicada I", "area": "leg", "cr": 5, "requiere": [] },
+        { "id": "MAT-0130", "nombre": "Matemática Financiera", "area": "cua", "cr": 5, "requiere": [ "MAT-0120" ] },
+        { "id": "ADM-0140", "nombre": "Gestión de Recursos Humanos", "area": "ges", "cr": 6, "requiere": [ "ADM-0120" ] },
+        { "id": "LIN-0250", "nombre": "Liderazgo y Dinámica de Grupos", "area": "ges", "cr": 5, "requiere": [ "ADM-0120" ] },
+        { "id": "ECO-0200", "nombre": "Macroeconomía", "area": "eco", "cr": 5, "requiere": [ "ECO-0120" ] },
+        { "id": "ADM-0300", "nombre": "Finanzas Empresariales I", "area": "fin", "cr": 6, "requiere": [ "CPA-0200" ] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "DER-0330", "nombre": "Derecho Comercial I", "area": "leg", "cr": 5, "requiere": [ "CPA-0300" ] },
+        { "id": "MAT-0300", "nombre": "Investigación Operativa I", "area": "ges", "cr": 6, "requiere": [ "MAT-0210" ] },
+        { "id": "ADM-0210", "nombre": "Principios de Marketing", "area": "mkt", "cr": 5, "requiere": [ "ADM-0201" ] },
+        { "id": "PSI-0215", "nombre": "Comportamiento Organizacional", "area": "ges", "cr": 5, "requiere": [ "ADM-0120" ] },
+        { "id": "ADM-0130", "nombre": "Organización y Sistemas", "area": "ges", "cr": 5, "requiere": [ "ADM-0120" ] },
+        { "id": "ADM-0310", "nombre": "Finanzas Empresariales II", "area": "fin", "cr": 6, "requiere": [ "ADM-0300" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "DER-0250", "nombre": "Derecho Laboral y Social", "area": "leg", "cr": 5, "requiere": [ "CPA-0300" ] },
+        { "id": "ADM-0250", "nombre": "Planificación de Marketing", "area": "mkt", "cr": 6, "requiere": [ "ADM-0210" ] },
+        { "id": "ADM-0220", "nombre": "Producto", "area": "mkt", "cr": 5, "requiere": [ "ADM-0210" ] },
+        { "id": "ADM-0230", "nombre": "Precio", "area": "mkt", "cr": 5, "requiere": [ "ADM-0210" ] },
+        { "id": "IND-0100", "nombre": "Producción y Manufactura Flexible I", "area": "ges", "cr": 5, "requiere": [ "CPA-0200" ] },
+        { "id": "ADM-0320", "nombre": "Finanzas Empresariales III", "area": "fin", "cr": 6, "requiere": [ "ADM-0310" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "IND-0300", "nombre": "Gestión de la Calidad I", "area": "lid", "cr": 6, "requiere": [ "MAT-0300" ] },
+        { "id": "ADM-0400", "nombre": "Administración Pública", "area": "ges", "cr": 5, "requiere": [ "ADM-0140" ] },
+        { "id": "ADM-0260", "nombre": "Plaza", "area": "mkt", "cr": 5, "requiere": [ "ADM-0210" ] },
+        { "id": "IND-0101", "nombre": "Producción y Manufactura Flexible II", "area": "ges", "cr": 5, "requiere": [ "IND-0100" ] },
+        { "id": "ADM-0410", "nombre": "Responsabilidad Social Empresarial", "area": "lid", "cr": 5, "requiere": [ "LIN-0250" ] },
+        { "id": "IND-0400", "nombre": "Preparación y Evaluación de Proyectos I", "area": "fin", "cr": 7, "requiere": [ "ADM-0320" ] }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "ELE-0001", "nombre": "Electiva 1", "area": "electiva", "cr": 5, "tipo": "electiva" },
+        { "id": "ADM-0401", "nombre": "Gestión Municipal", "area": "ges", "cr": 5, "requiere": [ "ADM-0400" ] },
+        { "id": "ELE-0002", "nombre": "Electiva 2", "area": "electiva", "cr": 5, "tipo": "electiva" },
+        { "id": "ELE-0003", "nombre": "Electiva 3", "area": "electiva", "cr": 5, "tipo": "electiva" },
+        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "area": "lid", "cr": 5, "requiere": [ "ADM-0410" ] },
+        { "id": "MKT-0350", "nombre": "Comercio Exterior", "area": "mkt", "cr": 5, "requiere": [ "ECO-0200" ] }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}
