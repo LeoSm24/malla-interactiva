@@ -4,7 +4,7 @@
    - Colores según estado
    - Líneas de conexión al pasar el mouse
    ========================================================= */
-import { estado } from "./reglas.js?v=8";
+import { estado } from "./reglas.js?v=9";
 
 const ICONOS = {
   locked: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
@@ -96,9 +96,9 @@ function curva(grid, modelo, desde, hasta) {
 }
 
 /* Resalta una materia, lo que necesita y lo que habilita */
-export function enfocar(grid, svg, info, modelo, aprobadas, id) {
+export function enfocar(grid, svg, info, modelo, aprobadas, id, atenuar = true) {
   grid.querySelectorAll(".is-focus,.is-pre,.is-next").forEach(e => e.classList.remove("is-focus", "is-pre", "is-next"));
-  grid.classList.toggle("focusing", !!id);
+  grid.classList.toggle("focusing", !!id && atenuar);
   svg.setAttribute("width", grid.scrollWidth);
   svg.setAttribute("height", grid.scrollHeight);
 

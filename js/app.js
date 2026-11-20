@@ -4,9 +4,9 @@
    - Maneja los selectores de carrera y plan
    - Conecta los clics con las reglas y el dibujo
    ========================================================= */
-import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=8";
-import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=8";
-import { dibujarMalla, dibujarLeyenda, colorArea, pintarEstados, enfocar, tarjeta } from "./malla.js?v=8";
+import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=9";
+import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=9";
+import { dibujarMalla, dibujarLeyenda, colorArea, pintarEstados, enfocar, tarjeta } from "./malla.js?v=9";
 
 const $ = id => document.getElementById(id);
 const grid = $("grid"), svg = $("links"), info = $("info");
@@ -89,7 +89,8 @@ function actualizar() {
   $("nowList").innerHTML = ahora.map(id => `<button class="chip" data-code="${id}" style="--area:${colorArea(modelo, id)}">${nombre(id)}</button>`).join("");
 }
 
-const foco = id => enfocar(grid, svg, info, modelo, aprobadas, id);
+// atenuar=true solo al pasar el mouse; la materia fijada con clic no apaga el resto de la malla
+const foco = (id, atenuar = false) => enfocar(grid, svg, info, modelo, aprobadas, id, atenuar);
 const guardarTodo = () => guardarAvance(carrera.id, planId, aprobadas);
 
 /* ---------- Aprobar / desaprobar una materia ---------- */
@@ -195,7 +196,7 @@ function conectarEventos() {
     if (sem) return alternarSemestre(sem);
     fijada = null; foco(null);
   });
-  grid.addEventListener("mouseover", e => { const c = e.target.closest(".card"); if (c) foco(c.dataset.code); });
+  grid.addEventListener("mouseover", e => { const c = e.target.closest(".card"); if (c) foco(c.dataset.code, true); });
   grid.addEventListener("mouseleave", () => foco(fijada));
 
   $("nowList").addEventListener("click", e => {
