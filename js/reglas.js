@@ -23,7 +23,7 @@ export function crearModelo(plan) {
     m.directos = [...m.requiere];
     const hasta = porTipo[m.tipo];
     if (!hasta) return;
-    const previas = Object.values(materias).filter(x => x.semestre < hasta && !porTipo[x.tipo]).map(x => x.id);
+    const previas = Object.values(materias).filter(x => x.semestre < hasta && x.tipo !== m.tipo && !(porTipo[x.tipo] >= hasta)).map(x => x.id);
     m.requiere = [...new Set([...previas, ...m.directos])];
     m.porRegla = true;
     m.hastaSemestre = hasta;

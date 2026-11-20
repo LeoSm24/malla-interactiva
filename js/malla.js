@@ -4,7 +4,7 @@
    - Colores según estado
    - Líneas de conexión al pasar el mouse
    ========================================================= */
-import { estado } from "./reglas.js?v=9";
+import { estado } from "./reglas.js?v=10";
 
 const ICONOS = {
   locked: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
@@ -30,7 +30,7 @@ export function dibujarMalla(grid, modelo) {
     const tarjetas = sem.materias.map(m => {
       const meses = modelo.meses(m.id);
       const detalle = [
-        modelo.plan.mostrarCodigos ? m.id : (m.cr ? `${m.cr} créditos` : ""),
+        modelo.plan.mostrarCodigos ? m.id : (m.cr ? `${m.cr} créditos` : m.th ? `${m.th} horas` : ""),
         meses > 1 ? `${meses} meses` : "",
       ].filter(Boolean).join(" · ");
       const color = colorDe[m.area] ? ` style="--area:${colorDe[m.area]}"` : "";

@@ -62,7 +62,7 @@ Listo: aparece en el selector de carreras, con un botón por cada plan.
 | `areas` | Áreas de la malla con su nombre y color, ej. `{ "id": "cb", "nombre": "Ciencias Básicas", "color": "#cddb7b" }`. Aparecen en la leyenda |
 | `reglas.mesesPorMateria` | Meses que dura cada materia (por defecto 1) |
 | `reglas.duraciones` | Materias con otra duración, ej. `{ "MDG-01": 4 }` |
-| `reglas.requiereHastaSemestre` | Por tipo de materia, hasta qué semestre hay que aprobar todo. Ej. `{ "electiva": 5, "practica": 5 }` |
+| `reglas.requiereHastaSemestre` | Por tipo de materia, hasta qué semestre hay que aprobar todo. Ej. `{ "electiva": 5, "practica": 5 }` o `{ "internado": 8 }` (todo lo anterior al VIII) |
 | `semestres[].nombre` | `"I"`, `"II"`… se muestra como "SEMESTRE I". Otro texto (ej. `"Grado"`) se muestra tal cual |
 
 Cada materia:

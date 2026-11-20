@@ -36,6 +36,14 @@
         { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/administracion-empresas/plan-antiguo.json" },
         { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/administracion-empresas/plan-nuevo.json" }
       ]
+    },
+    {
+      "id": "fisioterapia-kinesiologia",
+      "nombre": "Fisioterapia y Kinesiología",
+      "planPorDefecto": "nuevo",
+      "planes": [
+        { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/fisioterapia-kinesiologia/plan-nuevo.json" }
+      ]
     }
   ]
 }
