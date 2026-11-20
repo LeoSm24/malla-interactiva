@@ -88,7 +88,7 @@ sube el número de versión **en todos estos lugares** (ej. de `?v=5` a `?v=6`):
 - `js/app.js` → los tres `import … from "./….js?v=…"`
 - `js/malla.js` → `import … from "./reglas.js?v=…"`
 
-Los archivos de `data/` no necesitan esto: siempre se leen sin caché.
+Los archivos de `data/` no necesitan esto: se piden con una marca de tiempo (`?t=…`), así que siempre llegan actualizados.
 
 ## Links directos
 

@@ -4,9 +4,9 @@
    - Maneja los selectores de carrera y plan
    - Conecta los clics con las reglas y el dibujo
    ========================================================= */
-import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=6";
-import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=6";
-import { dibujarMalla, pintarEstados, enfocar, tarjeta } from "./malla.js?v=6";
+import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=7";
+import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=7";
+import { dibujarMalla, pintarEstados, enfocar, tarjeta } from "./malla.js?v=7";
 
 const $ = id => document.getElementById(id);
 const grid = $("grid"), svg = $("links"), info = $("info");
@@ -30,6 +30,10 @@ function fmtDuracion(m) {
   if (r) partes.push(`${r} mes${r > 1 ? "es" : ""}`);
   return partes.join(" y ") || "0 meses";
 }
+
+/* Agrega una marca de tiempo para saltar la caché del navegador y de la CDN de GitHub:
+   así los datos (data/*.json) siempre llegan actualizados. */
+const sinCache = url => `${url}?t=${Date.now()}`;
 
 /* ---------- Avisos ---------- */
 let tAviso;
@@ -153,7 +157,7 @@ async function cargarPlan(nuevaCarreraId, nuevoPlanId) {
 
   // Descarga el JSON del plan (solo la primera vez)
   if (!cache[planInfo.archivo]) {
-    const resp = await fetch("data/" + planInfo.archivo, { cache: "no-cache" }); // siempre la versión más reciente
+    const resp = await fetch(sinCache("data/" + planInfo.archivo));
     if (!resp.ok) throw new Error(`No se encontró data/${planInfo.archivo}`);
     cache[planInfo.archivo] = await resp.json();
   }
@@ -243,7 +247,7 @@ async function iniciar() {
   document.documentElement.dataset.theme = leer("malla:tema") || "dark";
   conectarEventos();
   migrarAvanceAnterior();
-  const resp = await fetch("data/carreras.json", { cache: "no-cache" });
+  const resp = await fetch(sinCache("data/carreras.json"));
   if (!resp.ok) throw new Error("No se encontró data/carreras.json");
   catalogo = await resp.json();
 
