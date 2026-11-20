@@ -1,0 +1,125 @@
+{
+  "carrera": "Gestión del Turismo",
+  "plan": "Malla nueva",
+  "descripcion": "Plan nuevo",
+  "mostrarCodigos": false,
+  "areas": [
+    { "id": "tec", "nombre": "Tecnología e Investigación", "color": "#f5d9d6" },
+    { "id": "emp", "nombre": "Emprendimiento y Administración", "color": "#fed5b7" },
+    { "id": "gas", "nombre": "Gastronomía", "color": "#d7d7d7" },
+    { "id": "hot", "nombre": "Hotelería", "color": "#c1d5ee" },
+    { "id": "tur", "nombre": "Turismo", "color": "#bfd8a1" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-AD1", "nombre": "Administración I", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-FGS", "nombre": "Fundamentos de Gastronomía Sostenible", "area": "gas", "ht": 70, "hp": 50, "cr": 6, "requiere": [] },
+        { "id": "N-FSH", "nombre": "Fundamentos de Sostenibilidad en Establecimientos de Hospedaje", "area": "hot", "ht": 70, "hp": 50, "cr": 6, "requiere": [] },
+        { "id": "N-FTS", "nombre": "Fundamentos de Turismo Sostenible", "area": "tur", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "N-HSM", "nombre": "Historia Sociopolítica del Mundo", "area": "tur", "ht": 90, "hp": 30, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "N-IAD", "nombre": "Investigación y Análisis de Datos", "area": "tec", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "N-MIC" ] },
+        { "id": "N-CE1", "nombre": "Contabilidad Empresarial I", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-LOR", "nombre": "Liderazgo y Oratoria", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "area": "emp", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-PTM", "nombre": "Patrimonio Turístico Mundial", "area": "tur", "ht": 90, "hp": 30, "cr": 6, "requiere": [ "N-HSM" ] },
+        { "id": "N-HSB", "nombre": "Historia Sociopolítica de Bolivia", "area": "tur", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "N-HSM" ] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "N-PIC", "nombre": "Procesos de Investigación Cualitativa", "area": "tec", "ht": 70, "hp": 50, "cr": 6, "requiere": [ "N-MIC" ] },
+        { "id": "N-MN1", "nombre": "Modelos de Negocio I", "area": "emp", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-FNG", "nombre": "Fundamentos de Nutrición para Gastrónomos", "area": "gas", "ht": 60, "hp": 60, "cr": 6, "requiere": [] },
+        { "id": "N-HSK", "nombre": "Housekeeping", "area": "hot", "ht": 30, "hp": 90, "cr": 6, "requiere": [] },
+        { "id": "N-FMK", "nombre": "Fundamentos de Marketing", "area": "emp", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-PTB", "nombre": "Patrimonio Turístico Boliviano", "area": "tur", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "N-HSB" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "N-IM1", "nombre": "Investigación de Mercados I", "area": "tec", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-MIC" ] },
+        { "id": "N-MN2", "nombre": "Modelos de Negocio II", "area": "emp", "ht": 30, "hp": 90, "cr": 6, "requiere": [ "N-MN1" ] },
+        { "id": "N-PGI", "nombre": "Patrimonio Gastronómico Internacional", "area": "gas", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-TDH", "nombre": "Tecnologías Digitales Aplicadas a la Hotelería", "area": "hot", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-FOT", "nombre": "Fotografía Digital", "area": "tec", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-GEO", "nombre": "Geografía Turística", "area": "tur", "ht": 40, "hp": 80, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "N-MKD", "nombre": "Marketing Digital", "area": "tec", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FMK" ] },
+        { "id": "N-PNP", "nombre": "Plan de Negocio, Pitch Emprendedor y Storytelling", "area": "emp", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-MN2" ] },
+        { "id": "N-PGN", "nombre": "Patrimonio Gastronómico Nacional", "area": "gas", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-ACL", "nombre": "Atención al Cliente", "area": "hot", "ht": 60, "hp": 60, "cr": 6, "requiere": [] },
+        { "id": "N-LEG", "nombre": "Legislación Turística", "area": "tur", "ht": 90, "hp": 30, "cr": 6, "requiere": [] },
+        { "id": "N-DRC", "nombre": "Diseño de Rutas y Circuitos Digitales", "area": "tur", "ht": 30, "hp": 90, "cr": 6, "requiere": [ "N-GEO" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "N-BPS", "nombre": "Branding de Productos y Servicios Turísticos", "area": "tur", "ht": 30, "hp": 90, "cr": 6, "requiere": [] },
+        { "id": "N-GT1", "nombre": "Gestión del Talento Humano I", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-GEP", "nombre": "Gestión de Eventos, Etiqueta, Protocolo y Ceremonial", "area": "hot", "ht": 60, "hp": 60, "cr": 6, "requiere": [] },
+        { "id": "N-CMM", "nombre": "Community Manager", "area": "tec", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-MKD" ] },
+        { "id": "N-OPT", "nombre": "Operación Turística", "area": "tur", "ht": 50, "hp": 70, "cr": 6, "requiere": [ "N-FTS", "N-LEG" ] },
+        { "id": "N-EL1", "nombre": "Electiva 1", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "N-FPR", "nombre": "Formulación de Proyectos", "area": "tur", "ht": 30, "hp": 90, "cr": 6, "requiere": [] },
+        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "area": "emp", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-HDR", "nombre": "Herramientas Digitales en Desarrollo de Recetas", "area": "gas", "ht": 30, "hp": 90, "cr": 6, "requiere": [] },
+        { "id": "N-HIB", "nombre": "Hospitalidad Inteligente y Big Data", "area": "hot", "ht": 30, "hp": 90, "cr": 6, "requiere": [] },
+        { "id": "N-GUI", "nombre": "Guiaje", "area": "tur", "ht": 30, "hp": 90, "cr": 6, "requiere": [ "N-PTB" ] },
+        { "id": "N-EL2", "nombre": "Electiva 2", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "N-GCS", "nombre": "Gestión de Calidad en Servicios Turísticos", "area": "hot", "ht": 90, "hp": 30, "cr": 6, "requiere": [] },
+        { "id": "N-ETB", "nombre": "Enología y Técnicas de Bar", "area": "gas", "ht": 30, "hp": 90, "cr": 6, "requiere": [] },
+        { "id": "N-DES", "nombre": "Dietas Especiales", "area": "gas", "ht": 30, "hp": 90, "cr": 6, "requiere": [ "N-FNG" ] },
+        { "id": "N-REV", "nombre": "Revenue Management", "area": "hot", "ht": 30, "hp": 90, "cr": 6, "requiere": [ "N-FMK" ] },
+        { "id": "N-EVP", "nombre": "Evaluación de Proyectos", "area": "tur", "ht": 30, "hp": 90, "cr": 6, "requiere": [ "N-FPR" ] },
+        { "id": "N-EL3", "nombre": "Electiva 3", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}

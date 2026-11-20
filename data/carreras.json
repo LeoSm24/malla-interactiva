@@ -57,9 +57,10 @@
     {
       "id": "gestion-turismo",
       "nombre": "Gestión del Turismo",
-      "planPorDefecto": "antiguo",
+      "planPorDefecto": "nuevo",
       "planes": [
-        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/gestion-turismo/plan-antiguo.json" }
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/gestion-turismo/plan-antiguo.json" },
+        { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/gestion-turismo/plan-nuevo.json" }
       ]
     }
   ]
