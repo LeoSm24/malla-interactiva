@@ -1,0 +1,127 @@
+{
+  "carrera": "Administración de Empresas",
+  "plan": "Malla nueva",
+  "descripcion": "Plan nuevo",
+  "mostrarCodigos": false,
+  "areas": [
+    { "id": "emp", "nombre": "Gestión Empresarial y Estratégica", "color": "#feeba7" },
+    { "id": "con", "nombre": "Gestión Contable, Económica y Financiera", "color": "#bfd8a1" },
+    { "id": "neg", "nombre": "Negocios, Emprendimiento y Proyectos", "color": "#b1dde8" },
+    { "id": "cua", "nombre": "Gestión Cuantitativa, Tecnológica y de Operaciones", "color": "#ffc296" },
+    { "id": "mkt", "nombre": "Marketing y Comercialización", "color": "#e9b6b3" },
+    { "id": "tal", "nombre": "Gestión del Talento Humano", "color": "#cabed6" },
+    { "id": "der", "nombre": "Derecho", "color": "#89cedd" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-AD1", "nombre": "Administración I", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-LCE", "nombre": "Liderazgo y Comunicación Efectiva", "area": "emp", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-MAP", "nombre": "Matemática Aplicada", "area": "cua", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-IEC", "nombre": "Introducción a la Economía", "area": "con", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "N-CE1", "nombre": "Contabilidad Empresarial I", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "area": "emp", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-AD2", "nombre": "Administración II", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-AD1" ] },
+        { "id": "N-EDE", "nombre": "Estadística Descriptiva", "area": "cua", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-MAP" ] },
+        { "id": "N-CA1", "nombre": "Cálculo I", "area": "cua", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-MAP" ] },
+        { "id": "N-MI1", "nombre": "Microeconomía I", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-IEC" ] },
+        { "id": "N-CE2", "nombre": "Contabilidad Empresarial II", "area": "con", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CE1" ] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "N-IM1", "nombre": "Investigación de Mercados I", "area": "mkt", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-MIC" ] },
+        { "id": "N-ADD", "nombre": "Análisis de Datos para Decisiones Estratégicas", "area": "emp", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-AD2" ] },
+        { "id": "N-EIN", "nombre": "Estadística Inferencial", "area": "cua", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-EDE" ] },
+        { "id": "N-FMK", "nombre": "Fundamentos de Marketing", "area": "mkt", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-MAC", "nombre": "Macroeconomía", "area": "con", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-MI1" ] },
+        { "id": "N-CC1", "nombre": "Contabilidad de Costos I", "area": "con", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CE2" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "N-IM2", "nombre": "Investigación de Mercados II", "area": "mkt", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-IM1" ] },
+        { "id": "N-GT1", "nombre": "Gestión del Talento Humano I", "area": "tal", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-AD2" ] },
+        { "id": "N-DOR", "nombre": "Diseño Organizacional", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-AD2" ] },
+        { "id": "N-MKE", "nombre": "Marketing Estratégico", "area": "mkt", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FMK" ] },
+        { "id": "N-DSO", "nombre": "Derecho Societario", "area": "der", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "N-MFI", "nombre": "Matemática Financiera", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-MAP" ] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "N-RSE", "nombre": "Responsabilidad Social Empresarial", "area": "emp", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "N-ETI" ] },
+        { "id": "N-GT2", "nombre": "Gestión del Talento Humano II", "area": "tal", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-GT1" ] },
+        { "id": "N-DEO", "nombre": "Desarrollo Organizacional", "area": "tal", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-GT1" ] },
+        { "id": "N-TRI", "nombre": "Tributación Aplicada I", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-CE2" ] },
+        { "id": "N-PRE", "nombre": "Presupuesto y Planificación", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-CE2" ] },
+        { "id": "N-FC1", "nombre": "Finanzas Corporativas I", "area": "con", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-MFI" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "N-NRC", "nombre": "Negociación y Resolución de Conflictos", "area": "tal", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DEO" ] },
+        { "id": "N-DLS", "nombre": "Derecho Laboral y Seguridad Social", "area": "tal", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "N-GT2" ] },
+        { "id": "N-GDO", "nombre": "Gestión de la Diversidad en las Organizaciones", "area": "tal", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DEO" ] },
+        { "id": "N-GCA", "nombre": "Gestión de la Calidad", "area": "emp", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "N-DOR" ] },
+        { "id": "N-EL1", "nombre": "Electiva 1", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" },
+        { "id": "N-FC2", "nombre": "Finanzas Corporativas II", "area": "con", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-FC1" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "area": "neg", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-EL2", "nombre": "Electiva 2", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" },
+        { "id": "N-GES", "nombre": "Gerencia Estratégica", "area": "emp", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "N-ADD" ] },
+        { "id": "N-AP1", "nombre": "Administración Pública I", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DOR" ] },
+        { "id": "N-MVI", "nombre": "Mercados de Valores e Instrumentos Financieros", "area": "con", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-FC2" ] },
+        { "id": "N-PEP", "nombre": "Preparación y Evaluación de Proyectos", "area": "neg", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "N-FC2" ] }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "N-GIS", "nombre": "Gestión de Incubación de Startups", "area": "neg", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-EMP" ] },
+        { "id": "N-IND", "nombre": "Inteligencia de Negocios y Análisis de Datos", "area": "cua", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-GES" ] },
+        { "id": "N-GOT", "nombre": "Gerencia de Operaciones y Tecnología Industrial", "area": "cua", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-GES" ] },
+        { "id": "N-AP2", "nombre": "Administración Pública II", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-AP1" ] },
+        { "id": "N-EL3", "nombre": "Electiva 3", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" },
+        { "id": "N-GPR", "nombre": "Gerencia de Proyectos", "area": "neg", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "N-PEP" ] }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}

@@ -31,9 +31,10 @@
     {
       "id": "administracion-empresas",
       "nombre": "Administración de Empresas",
-      "planPorDefecto": "antiguo",
+      "planPorDefecto": "nuevo",
       "planes": [
-        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/administracion-empresas/plan-antiguo.json" }
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/administracion-empresas/plan-antiguo.json" },
+        { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/administracion-empresas/plan-nuevo.json" }
       ]
     }
   ]
