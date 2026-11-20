@@ -51,7 +51,7 @@ Los archivos JSON se leen con `fetch`, y los navegadores lo bloquean si abres `i
 }
 ```
 
-Listo: aparece en el selector de carreras. Si tiene un solo plan, los botones de plan se ocultan solos.
+Listo: aparece en el selector de carreras, con un botón por cada plan.
 
 ## Formato de un plan
 

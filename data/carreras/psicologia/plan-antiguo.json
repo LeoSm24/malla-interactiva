@@ -1,0 +1,116 @@
+{
+  "carrera": "Psicología",
+  "plan": "Malla antigua",
+  "descripcion": "Plan anterior",
+  "mostrarCodigos": true,
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "SOC-0100", "nombre": "Sociología", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
+        { "id": "FIL-0100", "nombre": "Filosofía", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "PSI-0115", "nombre": "Psicobiología", "ht": 80, "hp": 40, "cr": 6, "requiere": [] },
+        { "id": "PSI-0120", "nombre": "Escuelas Psicológicas", "ht": 80, "hp": 20, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "PSI-0110", "nombre": "Psicología Social I", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "SOC-0100" ] },
+        { "id": "HIS-0250", "nombre": "Formación Social Boliviana", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "SOC-0100" ] },
+        { "id": "SOC-0110", "nombre": "Antropología", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "FIL-0100" ] },
+        { "id": "PSI-0135", "nombre": "Psicolingüística", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "FIL-0100" ] },
+        { "id": "PSI-0125", "nombre": "Neurología I", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0115" ] },
+        { "id": "PSI-0130", "nombre": "Teorías de la Personalidad", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0120" ] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "PSI-0111", "nombre": "Psicología Social II", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0110" ] },
+        { "id": "PSI-0250", "nombre": "Etnopsicología", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "SOC-0110" ] },
+        { "id": "ADM-0100", "nombre": "Administración I", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "LIN-0110" ] },
+        { "id": "PSI-0145", "nombre": "Desarrollo Evolutivo I", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0125" ] },
+        { "id": "PSI-0140", "nombre": "Psicología Experimental", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0130" ] },
+        { "id": "PSI-0160", "nombre": "Psicología del Aprendizaje", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0130" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "PSI-0200", "nombre": "Psicología Comunicacional", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0111" ] },
+        { "id": "PSI-0260", "nombre": "Psicología Sistémica", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0111" ] },
+        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "INV-0100" ] },
+        { "id": "PSI-0215", "nombre": "Comportamiento Organizacional", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "ADM-0100" ] },
+        { "id": "PSI-0210", "nombre": "Psicología Cognitiva", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0145" ] },
+        { "id": "PSI-0170", "nombre": "Psicoanálisis I", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0160" ] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "PSI-0300", "nombre": "Psicología Institucional", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0200" ] },
+        { "id": "LIN-0250", "nombre": "Liderazgo y Dinámica de Grupos", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0215" ] },
+        { "id": "PSI-0180", "nombre": "Psicometría", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "PSI-0210" ] },
+        { "id": "PSI-0220", "nombre": "Psicología Educativa", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0210" ] },
+        { "id": "PSI-0235", "nombre": "Psicopatología", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0170" ] },
+        { "id": "PSI-0171", "nombre": "Psicoanálisis II", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0170" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "PSI-0310", "nombre": "Intervención Socio Comunitaria", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "PSI-0300" ] },
+        { "id": "PSI-0230", "nombre": "Dificultades de Aprendizaje", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0220" ] },
+        { "id": "PSI-0245", "nombre": "Taller de Técnicas Proyectivas", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0180" ] },
+        { "id": "PSI-0330", "nombre": "Psicofarmacología", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0235" ] },
+        { "id": "PSI-0240", "nombre": "Técnicas Proyectivas I", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0180" ] },
+        { "id": "PSI-0320", "nombre": "Entrevistas Psicológicas", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0171" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "ADM-0140", "nombre": "Gestión de Recursos Humanos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "LIN-0250" ] },
+        { "id": "ELE-0001", "nombre": "Electiva 1", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "INV-0110", "nombre": "Métodos y Técnicas de Investigación Aplicada", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "MAT-0200" ] },
+        { "id": "ELE-0003", "nombre": "Electiva 3", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "PSI-0241", "nombre": "Técnicas Proyectivas II", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0240" ] },
+        { "id": "PSI-0400", "nombre": "Clínica I", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0320" ] }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "LIN-0210", "nombre": "Orientación Vocacional", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "ADM-0140" ] },
+        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "LIN-0250" ] },
+        { "id": "ELE-0002", "nombre": "Electiva 2", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "PSI-0242", "nombre": "Técnicas Proyectivas III", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0241" ] },
+        { "id": "PSI-0410", "nombre": "Psicodiagnóstico", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "PSI-0400" ] },
+        { "id": "PSI-0401", "nombre": "Clínica II", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0400" ] }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}

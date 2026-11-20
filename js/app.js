@@ -4,9 +4,9 @@
    - Maneja los selectores de carrera y plan
    - Conecta los clics con las reglas y el dibujo
    ========================================================= */
-import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=5";
-import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=5";
-import { dibujarMalla, pintarEstados, enfocar, tarjeta } from "./malla.js?v=5";
+import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=6";
+import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=6";
+import { dibujarMalla, pintarEstados, enfocar, tarjeta } from "./malla.js?v=6";
 
 const $ = id => document.getElementById(id);
 const grid = $("grid"), svg = $("links"), info = $("info");
@@ -149,7 +149,7 @@ async function cargarPlan(nuevaCarreraId, nuevoPlanId) {
   $("careerSelect").value = carrera.id;
   $("planSeg").innerHTML = carrera.planes
     .map(p => `<button data-plan="${p.id}" class="${p.id === planId ? "on" : ""}">${p.nombre}</button>`).join("");
-  $("planSeg").style.display = carrera.planes.length > 1 ? "" : "none";
+  // Se muestra aunque haya un solo plan, para que siempre se sepa qué malla es
 
   // Descarga el JSON del plan (solo la primera vez)
   if (!cache[planInfo.archivo]) {

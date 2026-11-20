@@ -18,6 +18,14 @@
         { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/ingenieria-industrial/plan-antiguo.json" },
         { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/ingenieria-industrial/plan-nuevo.json" }
       ]
+    },
+    {
+      "id": "psicologia",
+      "nombre": "Psicología",
+      "planPorDefecto": "antiguo",
+      "planes": [
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/psicologia/plan-antiguo.json" }
+      ]
     }
   ]
 }
