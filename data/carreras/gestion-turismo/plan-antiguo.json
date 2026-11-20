@@ -1,0 +1,126 @@
+{
+  "carrera": "Gestión del Turismo",
+  "plan": "Malla antigua",
+  "descripcion": "Plan anterior",
+  "mostrarCodigos": true,
+  "areas": [
+    { "id": "inv", "nombre": "Investigación Aplicada al Turismo", "color": "#e4b8b5" },
+    { "id": "con", "nombre": "Conocimiento Turístico", "color": "#c2d59e" },
+    { "id": "her", "nombre": "Herramientas Digitales para el Turismo", "color": "#b6dce7" },
+    { "id": "gas", "nombre": "Gastronomía", "color": "#83ffb9" },
+    { "id": "div", "nombre": "Diversidad Cultural y Patrimonio", "color": "#f9d6bb" },
+    { "id": "emp", "nombre": "Gestión de Empresas Turísticas", "color": "#cbc1d9" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "area": "inv", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
+        { "id": "TUR-0100", "nombre": "Introducción al Turismo", "area": "con", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "area": "her", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "GAT-0100", "nombre": "Técnicas de Bar, Restaurante y Cocina", "area": "gas", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "HIS-0120", "nombre": "Diversidad Cultural Boliviana", "area": "div", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "CPA-0135", "nombre": "Contabilidad Presupuestaria", "area": "emp", "ht": 60, "hp": 60, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "area": "inv", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "INV-0100" ] },
+        { "id": "TUR-0120", "nombre": "Sociología del Turismo, Tiempo Libre y Ocio", "area": "con", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0100" ] },
+        { "id": "TUR-0140", "nombre": "Herramientas Digitales, Marketing y Comercio Electrónico en Turismo", "area": "her", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "LIN-0110" ] },
+        { "id": "GAT-0120", "nombre": "Procesos de Conservación de Alimentos y Control de Calidad", "area": "gas", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "GAT-0100" ] },
+        { "id": "HIS-0200", "nombre": "Historia Sociopolítica Boliviana", "area": "div", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "HIS-0120" ] },
+        { "id": "ADM-0100", "nombre": "Administración I", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "CPA-0135" ] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "INV-0110", "nombre": "Métodos y Técnicas de Investigación Aplicada", "area": "inv", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "MAT-0200" ] },
+        { "id": "TUR-0150", "nombre": "Animación y Recreación en Turismo", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "TUR-0120" ] },
+        { "id": "TUR-0200", "nombre": "Aviación Comercial y Boletaje Automatizado Nacional e Internacional", "area": "her", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0140" ] },
+        { "id": "GAT-0150", "nombre": "Panadería, Pastelería y Repostería", "area": "gas", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "GAT-0120" ] },
+        { "id": "TUR-0170", "nombre": "Geografía Turística Internacional", "area": "div", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "HIS-0200" ] },
+        { "id": "ADM-0140", "nombre": "Gestión de Recursos Humanos", "area": "emp", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "ADM-0100" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "INV-0120", "nombre": "Investigación Aplicada I", "area": "inv", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "INV-0110" ] },
+        { "id": "COM-0125", "nombre": "Análisis Crítico de la Realidad Nacional e Internacional", "area": "con", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0150" ] },
+        { "id": "TUR-0215", "nombre": "Agencias de Viajes y Turismo", "area": "her", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0200" ] },
+        { "id": "GAT-0200", "nombre": "Gastronomía Nacional", "area": "gas", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "GAT-0150" ] },
+        { "id": "TUR-0180", "nombre": "Geografía Turística Nacional", "area": "div", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0170" ] },
+        { "id": "TUR-0220", "nombre": "Hotelería", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "ADM-0140" ] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "TUR-0230", "nombre": "Análisis e Investigación de Mercados Turísticos", "area": "inv", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "INV-0120" ] },
+        { "id": "ECO-0100", "nombre": "Introducción a la Economía", "area": "con", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "COM-0125" ] },
+        { "id": "TUR-0260", "nombre": "Transportación Turística", "area": "her", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "TUR-0215" ] },
+        { "id": "GAT-0210", "nombre": "Gastronomía Internacional", "area": "gas", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "GAT-0200" ] },
+        { "id": "TUR-0300", "nombre": "Patrimonio Artístico y Cultural Internacional", "area": "div", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0180" ] },
+        { "id": "GAT-0250", "nombre": "Gestión de Alimentos y Bebidas en Hoteles", "area": "emp", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "TUR-0220" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "TUR-0280", "nombre": "Diagnósticos Integrales para la Gestión del Turismo Municipal, Comunitario y Accesible", "area": "inv", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "TUR-0230" ] },
+        { "id": "DER-0325", "nombre": "Legislación Turística", "area": "con", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "ECO-0100" ] },
+        { "id": "TUR-0330", "nombre": "Operación Mayorista y Programación Turística", "area": "her", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0260" ] },
+        { "id": "GAT-0260", "nombre": "Enología, Bebidas y Maridaje", "area": "gas", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "GAT-0210" ] },
+        { "id": "TUR-0310", "nombre": "Patrimonio Artístico Cultural y Arqueológico Nacional", "area": "div", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0300" ] },
+        { "id": "TUR-0355", "nombre": "Atención al Cliente", "area": "emp", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "GAT-0250" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "TUR-0350", "nombre": "Planificación y Ejecución de Proyectos de Turismo Sostenible y Gestión Medio Ambiental", "area": "inv", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "TUR-0280" ] },
+        { "id": "ELE-0001", "nombre": "Electiva 1", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "area": "con", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "COM-0125" ] },
+        { "id": "TUR-0360", "nombre": "Circuitos Turísticos, Destinos y Productos", "area": "her", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "TUR-0330" ] },
+        { "id": "TUR-0380", "nombre": "Teoría del Folklore", "area": "div", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "TUR-0310" ] },
+        { "id": "REL-0410", "nombre": "Etiqueta, Protocolo y Ceremonial", "area": "emp", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "TUR-0355" ] }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "TUR-0385", "nombre": "Dirección y Evaluación de la Gestión Turística", "area": "inv", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "TUR-0350" ] },
+        { "id": "ELE-0002", "nombre": "Electiva 2", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ELE-0003", "nombre": "Electiva 3", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "TUR-0390", "nombre": "Técnicas de Guía", "area": "her", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "TUR-0360" ] },
+        { "id": "TUR-0370", "nombre": "Museos y Bibliotecas", "area": "div", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "TUR-0380" ] },
+        { "id": "REL-0301", "nombre": "Gestión de Eventos", "area": "emp", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "REL-0410" ] }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}

@@ -53,6 +53,14 @@
         { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/psicopedagogia/plan-antiguo.json" },
         { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/psicopedagogia/plan-nuevo.json" }
       ]
+    },
+    {
+      "id": "gestion-turismo",
+      "nombre": "Gestión del Turismo",
+      "planPorDefecto": "antiguo",
+      "planes": [
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/gestion-turismo/plan-antiguo.json" }
+      ]
     }
   ]
 }
