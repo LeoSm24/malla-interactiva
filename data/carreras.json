@@ -1,0 +1,22 @@
+{
+  "universidad": "Universidad Privada Domingo Savio",
+  "carreras": [
+    {
+      "id": "ingenieria-sistemas",
+      "nombre": "Ingeniería de Sistemas",
+      "planPorDefecto": "nuevo",
+      "planes": [
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/ingenieria-sistemas/plan-antiguo.json" },
+        { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/ingenieria-sistemas/plan-nuevo.json" }
+      ]
+    },
+    {
+      "id": "ingenieria-industrial",
+      "nombre": "Ingeniería Industrial",
+      "planPorDefecto": "vigente",
+      "planes": [
+        { "id": "vigente", "nombre": "Malla vigente", "archivo": "carreras/ingenieria-industrial/plan-vigente.json" }
+      ]
+    }
+  ]
+}

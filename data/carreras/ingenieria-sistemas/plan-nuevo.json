@@ -1,0 +1,126 @@
+{
+  "carrera": "Ingeniería de Sistemas",
+  "plan": "Malla nueva",
+  "descripcion": "Plan nuevo",
+  "mostrarCodigos": false,
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "electivas": {
+      "requiereHastaSemestre": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-FMA", "nombre": "Fundamentos de Matemáticas", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-ING", "nombre": "Inglés Técnico I", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
+        { "id": "N-PRB", "nombre": "Programación Básica", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
+        { "id": "N-HSR", "nombre": "Hardware, Software y Redes", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-EDI", "nombre": "Estructuras Discretas", "ht": 40, "hp": 60, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "N-ALG", "nombre": "Álgebra Lineal", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-CA1", "nombre": "Cálculo I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FMA" ] },
+        { "id": "N-FIS", "nombre": "Física I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-FMA" ] },
+        { "id": "N-PR1", "nombre": "Programación I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PRB" ] },
+        { "id": "N-SO1", "nombre": "Sistemas Operativos I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-HSR" ] },
+        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "ht": 50, "hp": 50, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "N-EST", "nombre": "Estadística Descriptiva", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-CA2", "nombre": "Cálculo II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CA1" ] },
+        { "id": "N-GFP", "nombre": "Gestión Financiera para Proyecto TIC", "ht": 60, "hp": 60, "cr": 6, "requiere": [] },
+        { "id": "N-PR2", "nombre": "Programación II", "ht": 40, "hp": 60, "cr": 6, "requiere": [ "N-PR1" ] },
+        { "id": "N-SO2", "nombre": "Sistemas Operativos II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-SO1" ] },
+        { "id": "N-SD1", "nombre": "Sistemas Digitales I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-EDI" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "N-IO1", "nombre": "Investigación Operativa I", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-ALG" ] },
+        { "id": "N-RE1", "nombre": "Redes I", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-ANU", "nombre": "Análisis Numérico", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CA2" ] },
+        { "id": "N-PR3", "nombre": "Programación III", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PR2" ] },
+        { "id": "N-BD1", "nombre": "Base de Datos I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PR1" ] },
+        { "id": "N-TCO", "nombre": "Teoría de la Computación", "ht": 40, "hp": 80, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "N-ESI", "nombre": "Estadística Inferencial", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-EST" ] },
+        { "id": "N-RE2", "nombre": "Redes II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-RE1" ] },
+        { "id": "N-EDA", "nombre": "Estructuras de Datos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PR3" ] },
+        { "id": "N-DS1", "nombre": "Desarrollo de Sistemas I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PR3" ] },
+        { "id": "N-BD2", "nombre": "Base de Datos II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-BD1" ] },
+        { "id": "N-SI1", "nombre": "Sistemas de Información I", "ht": 40, "hp": 80, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "N-MLE", "nombre": "Machine Learning", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-ESI" ] },
+        { "id": "N-INE", "nombre": "Inteligencia de Negocios", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-DW1", "nombre": "Desarrollo Web I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PR3" ] },
+        { "id": "N-DS2", "nombre": "Desarrollo de Sistemas II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DS1" ] },
+        { "id": "N-ABD", "nombre": "Administración de Base de Datos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-BD2" ] },
+        { "id": "N-SI2", "nombre": "Sistemas de Información II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-SI1" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "N-DLE", "nombre": "Deep Learning", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-MLE" ] },
+        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-AUD", "nombre": "Auditoría de Sistemas", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DS2" ] },
+        { "id": "N-ASE", "nombre": "Administración de Servidores", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-APM", "nombre": "Aplicaciones Móviles", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DS1" ] },
+        { "id": "N-GTI", "nombre": "Gerenciamiento TIC", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-SI2" ] }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "N-SEG", "nombre": "Seguridad Informática", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-AUD" ] },
+        { "id": "N-DW2", "nombre": "Desarrollo Web II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DW1" ] },
+        { "id": "N-DPR", "nombre": "Dirección de Proyectos", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-NUB", "nombre": "Servicios de Infraestructura en la Nube", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-ASE" ] },
+        { "id": "N-TBD", "nombre": "Tecnología de Base de Datos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-ABD" ] },
+        { "id": "N-EL1", "nombre": "Electiva 1", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "IX",
+      "materias": [
+        { "id": "N-VIC", "nombre": "Visión Computacional", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DLE" ] },
+        { "id": "N-IOT", "nombre": "Internet de las Cosas", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-CAL", "nombre": "Calidad de Software", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-SEG" ] },
+        { "id": "N-DEV", "nombre": "DevOps", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-NUB" ] },
+        { "id": "N-NEL", "nombre": "Negocios Electrónicos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-EMP" ] },
+        { "id": "N-EL2", "nombre": "Electiva 2", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}

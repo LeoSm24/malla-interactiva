@@ -1,0 +1,126 @@
+{
+  "carrera": "Ingeniería de Sistemas",
+  "plan": "Malla antigua",
+  "descripcion": "Plan 320-04",
+  "mostrarCodigos": true,
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "electivas": {
+      "requiereHastaSemestre": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "MAT-0125", "nombre": "Estructuras Discretas", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "ELC-0100", "nombre": "Hardware y Software", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "SIS-0120", "nombre": "Programación Básica", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "LIN-0200", "nombre": "Inglés I", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "MAT-0100", "nombre": "Fundamentos de Matemáticas", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "ht": 20, "hp": 80, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "ELC-0110", "nombre": "Sistemas Digitales I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0125" ] },
+        { "id": "SIS-0121", "nombre": "Programación I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0120" ] },
+        { "id": "SIS-0200", "nombre": "Sistemas Operativos I", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "SIS-0120" ] },
+        { "id": "MAT-0110", "nombre": "Álgebra Lineal", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0100" ] },
+        { "id": "FIS-0100", "nombre": "Física I", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "MAT-0100" ] },
+        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "ht": 80, "hp": 20, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "ELC-0120", "nombre": "Sistemas Digitales II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "ELC-0110" ] },
+        { "id": "SIS-0122", "nombre": "Programación II", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "SIS-0121" ] },
+        { "id": "SIS-0210", "nombre": "Taller de Sistemas Operativos I", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "SIS-0200" ] },
+        { "id": "LIN-0201", "nombre": "Inglés II", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "LIN-0200" ] },
+        { "id": "MAT-0300", "nombre": "Investigación Operativa I", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "MAT-0110" ] },
+        { "id": "MAT-0120", "nombre": "Cálculo I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0100" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "RED-0100", "nombre": "Redes I", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "ELC-0110" ] },
+        { "id": "SIS-0140", "nombre": "Diseño Web I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0121" ] },
+        { "id": "SIS-0123", "nombre": "Programación III", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0122" ] },
+        { "id": "SIS-0125", "nombre": "Base de Datos I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0122" ] },
+        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0100" ] },
+        { "id": "CPA-0100", "nombre": "Contabilidad Empresarial I", "ht": 60, "hp": 60, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "SIS-0300", "nombre": "Programación Web I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0125" ] },
+        { "id": "SIS-0145", "nombre": "Desarrollo de Sistemas I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0125" ] },
+        { "id": "SIS-0130", "nombre": "Estructuras de Datos", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0123" ] },
+        { "id": "SIS-0126", "nombre": "Base de Datos II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0125" ] },
+        { "id": "SIS-0211", "nombre": "Sistemas Operativos II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0200" ] },
+        { "id": "MAT-0210", "nombre": "Estadística Inferencial", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0200" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "RED-0130", "nombre": "Redes II", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "RED-0100" ] },
+        { "id": "SIS-0301", "nombre": "Programación Web II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0300" ] },
+        { "id": "SIS-0150", "nombre": "Tecnología Web I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0125" ] },
+        { "id": "SIS-0310", "nombre": "Administración de Base de Datos I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0126" ] },
+        { "id": "SIS-0320", "nombre": "Sistemas de Información I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0145" ] },
+        { "id": "SIS-0141", "nombre": "Diseño Web II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0140" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "SIS-0250", "nombre": "Inteligencia Artificial I", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "SIS-0130" ] },
+        { "id": "SIS-0330", "nombre": "Desarrollo de Sistemas II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0145" ] },
+        { "id": "SIS-0321", "nombre": "Sistemas de Información II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0320" ] },
+        { "id": "SIS-0124", "nombre": "Programación IV", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0123" ] },
+        { "id": "SIS-0151", "nombre": "Tecnología Web II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0150" ] },
+        { "id": "ELE-0001", "nombre": "Electiva 1", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "SIS-0180", "nombre": "Aplicaciones Móviles I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0123" ] },
+        { "id": "SIS-0325", "nombre": "Ingeniería de Software I", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "SIS-0321" ] },
+        { "id": "SIS-0322", "nombre": "Sistemas de Información III", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0321" ] },
+        { "id": "SIS-0350", "nombre": "Tecnología de Base de Datos I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0126" ] },
+        { "id": "SIS-0360", "nombre": "Seguridad Informática I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0321" ] },
+        { "id": "ELE-0002", "nombre": "Electiva 2", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "IX",
+      "materias": [
+        { "id": "SIS-0400", "nombre": "Auditoría de Sistemas I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "SIS-0360" ] },
+        { "id": "INV-0170", "nombre": "Inteligencia de Negocios", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "SIS-0321" ] },
+        { "id": "SIS-0341", "nombre": "Ingeniería de Software II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "SIS-0325" ] },
+        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "LIN-0110" ] },
+        { "id": "ELE-0003", "nombre": "Electiva 3", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ELE-0004", "nombre": "Electiva 4", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "X",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}

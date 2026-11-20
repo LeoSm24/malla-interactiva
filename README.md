@@ -1,0 +1,84 @@
+# Malla Interactiva
+
+Malla curricular interactiva: marca las materias aprobadas, mira cuáles se desbloquean
+y calcula cuánto te falta para graduarte. Funciona para **varias carreras y planes**.
+
+## Estructura
+
+```
+malla-interactiva/
+├── index.html                  → estructura de la página
+├── css/styles.css              → diseño (colores, tarjetas, animaciones)
+├── js/
+│   ├── app.js                  → arranque, selectores de carrera/plan y clics
+│   ├── malla.js                → dibuja la grilla, tarjetas y conexiones
+│   ├── reglas.js               → lógica: disponibilidad, tiempo, plan mes a mes
+│   └── storage.js              → guarda el avance en el navegador
+└── data/
+    ├── carreras.json           → catálogo de carreras y sus planes
+    ├── plantilla-plan.json     → plantilla para crear una carrera nueva
+    └── carreras/
+        └── ingenieria-sistemas/
+            ├── plan-antiguo.json
+            └── plan-nuevo.json
+```
+
+**Regla de oro:** el código (`js/`) no sabe nada de ninguna carrera. Todo lo específico vive en `data/`.
+
+## Cómo abrirlo
+
+Los archivos JSON se leen con `fetch`, y los navegadores lo bloquean si abres `index.html` con doble clic.
+Ábrelo con un servidor:
+
+- **VS Code:** extensión *Live Server* → clic derecho en `index.html` → "Open with Live Server".
+- **Python:** en la carpeta, ejecuta `python -m http.server` y abre `http://localhost:8000`.
+- **GitHub Pages:** funciona directo al publicarlo.
+
+## Agregar una carrera nueva (sin tocar código)
+
+1. Crea la carpeta `data/carreras/<id-de-la-carrera>/` (ej. `ingenieria-comercial`).
+2. Copia `data/plantilla-plan.json` dentro, renómbralo (ej. `plan-nuevo.json`) y llénalo con sus materias.
+3. Agrégala al catálogo `data/carreras.json`:
+
+```json
+{
+  "id": "ingenieria-comercial",
+  "nombre": "Ingeniería Comercial",
+  "planPorDefecto": "nuevo",
+  "planes": [
+    { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/ingenieria-comercial/plan-nuevo.json" }
+  ]
+}
+```
+
+Listo: aparece en el selector de carreras. Si tiene un solo plan, los botones de plan se ocultan solos.
+
+## Formato de un plan
+
+| Campo | Qué es |
+|---|---|
+| `descripcion` | Texto bajo el título (ej. "Plan 320-04") |
+| `mostrarCodigos` | `true` muestra el código de la materia; `false` muestra los créditos |
+| `reglas.mesesPorMateria` | Meses que dura cada materia (por defecto 1) |
+| `reglas.duraciones` | Materias con otra duración, ej. `{ "MDG-01": 4 }` |
+| `reglas.electivas.requiereHastaSemestre` | Las electivas se habilitan al aprobar todo hasta ese semestre |
+| `semestres[].nombre` | `"I"`, `"II"`… se muestra como "SEMESTRE I". Otro texto (ej. `"Grado"`) se muestra tal cual |
+
+Cada materia:
+
+```json
+{ "id": "SIS-0121", "nombre": "Programación I", "ht": 40, "hp": 60, "cr": 5, "requiere": ["SIS-0120"] }
+```
+
+- `id`: único dentro del plan. Es lo que se usa en `requiere`.
+- `requiere`: lista de `id` que hay que aprobar antes.
+- `"tipo": "electiva"`: la materia sigue la regla de electivas (no necesita `requiere`).
+- Para nombres muy largos puedes usar `­` (guion opcional), ej. `"Emprende­durismo"`.
+
+> Si escribes mal un `id` en `requiere`, la consola del navegador (F12) muestra un aviso
+> indicando qué materia pide algo que no existe.
+
+## Links directos
+
+Cada malla tiene su propio link: `index.html#ingenieria-sistemas--nuevo`.
+Sirve para compartir una carrera y plan específicos.

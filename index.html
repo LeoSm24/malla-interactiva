@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <small id="planSub">Malla interactiva</small>
+      <div class="pickers">
+        <div class="select">
+          <select id="careerSelect" aria-label="Elegir carrera"></select>
+        </div>
+        <div class="seg" id="planSeg" role="tablist" aria-label="Elegir plan"></div>
+      </div>
+    </div>
+    <div class="tools">
+      <button class="btn" id="btnTheme">Tema</button>
+      <button class="btn" id="btnReset">Reiniciar</button>
+    </div>
+  </header>
+
+  <section class="summary">
+    <div class="kpi">
+      <span>Avance</span>
+      <b class="accent" id="kPct">0%</b>
+      <p id="kApproved">—</p>
+      <div class="bar"><i id="bar"></i></div>
+    </div>
+    <div class="kpi">
+      <span>Te faltan</span>
+      <b id="kLeft">—</b>
+      <p id="kNow">—</p>
+    </div>
+    <div class="kpi">
+      <span>Tiempo para graduarte</span>
+      <b id="kTime">—</b>
+      <p id="kDate">—</p>
+    </div>
+  </section>
+
+  <div class="help">
+    <span><i class="dot a"></i>Aprobada</span>
+    <span><i class="dot v"></i>Disponible</span>
+    <span><i class="dot l"></i>Bloqueada</span>
+    <span class="sep"></span>
+    <span>Clic en una materia para aprobarla · clic en el semestre para aprobarlo completo</span>
+  </div>
+
+  <div class="scroller">
+    <div class="grid" id="grid"><svg class="links" id="links"></svg></div>
+  </div>
+  <div class="status" id="status">Cargando malla…</div>
+  <div class="info" id="info"></div>
+
+  <section class="plan">
+    <div>
+      <h2>Lo que te falta</h2>
+      <p class="lead" id="planLead"></p>
+      <div class="label" id="nowLabel">PUEDES CURSAR AHORA</div>
+      <div class="now" id="nowList"></div>
+    </div>
+    <div>
+      <div class="label" style="margin-top:4px">PLAN MES A MES · respetando prerrequisitos</div>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- type="module" permite usar import/export entre archivos JS -->
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
