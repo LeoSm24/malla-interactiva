@@ -1,7 +1,7 @@
 {
   "carrera": "Ingeniería Industrial",
-  "plan": "Malla vigente",
-  "descripcion": "Ingeniería Industrial",
+  "plan": "Malla antigua",
+  "descripcion": "Plan anterior",
   "mostrarCodigos": true,
   "reglas": {
     "mesesPorMateria": 1,

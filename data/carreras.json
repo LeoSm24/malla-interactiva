@@ -13,9 +13,10 @@
     {
       "id": "ingenieria-industrial",
       "nombre": "Ingeniería Industrial",
-      "planPorDefecto": "vigente",
+      "planPorDefecto": "nuevo",
       "planes": [
-        { "id": "vigente", "nombre": "Malla vigente", "archivo": "carreras/ingenieria-industrial/plan-vigente.json" }
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/ingenieria-industrial/plan-antiguo.json" },
+        { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/ingenieria-industrial/plan-nuevo.json" }
       ]
     }
   ]

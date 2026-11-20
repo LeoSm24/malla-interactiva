@@ -1,0 +1,126 @@
+{
+  "carrera": "Ingeniería Industrial",
+  "plan": "Malla nueva",
+  "descripcion": "Plan nuevo",
+  "mostrarCodigos": false,
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "electivas": {
+      "requiereHastaSemestre": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "N-FMA", "nombre": "Fundamentos de Matemáticas", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-QGE", "nombre": "Química General", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-PRB", "nombre": "Programación Básica", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
+        { "id": "N-FI1", "nombre": "Física I", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-ING", "nombre": "Inglés Técnico I", "ht": 20, "hp": 80, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "N-CA1", "nombre": "Cálculo I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FMA" ] },
+        { "id": "N-ALG", "nombre": "Álgebra Lineal", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FMA" ] },
+        { "id": "N-QOR", "nombre": "Química Orgánica", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-QGE" ] },
+        { "id": "N-EDE", "nombre": "Estadística Descriptiva", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-FI2", "nombre": "Física II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-FI1" ] },
+        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "ht": 50, "hp": 50, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "N-CA2", "nombre": "Cálculo II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CA1" ] },
+        { "id": "N-PM1", "nombre": "Producción y Manufactura Flexible I", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-DIB", "nombre": "Dibujo Computarizado en Ingeniería", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-EIN", "nombre": "Estadística Inferencial", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-EDE" ] },
+        { "id": "N-DFL", "nombre": "Dinámica de Fluidos para la Ingeniería", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FI1" ] },
+        { "id": "N-CEM", "nombre": "Contabilidad Empresarial I", "ht": 40, "hp": 60, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "N-IO1", "nombre": "Investigación Operativa I", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-ALG" ] },
+        { "id": "N-GDA", "nombre": "Gestión de Datos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PRB" ] },
+        { "id": "N-CEC", "nombre": "Control Estadístico de Calidad", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-EIN" ] },
+        { "id": "N-ELT", "nombre": "Electrotecnia Industrial", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-FI2" ] },
+        { "id": "N-TER", "nombre": "Termodinámica", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DFL" ] },
+        { "id": "N-IEC", "nombre": "Introducción a la Economía", "ht": 80, "hp": 20, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "N-IO2", "nombre": "Investigación Operativa II", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "N-IO1" ] },
+        { "id": "N-PM2", "nombre": "Producción y Manufactura Flexible II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PM1" ] },
+        { "id": "N-CII", "nombre": "Construcciones e Instalaciones Industriales", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-DIB" ] },
+        { "id": "N-IME", "nombre": "Ingeniería de Métodos y Ergonomía", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-OU1", "nombre": "Operaciones Unitarias I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-TER" ] },
+        { "id": "N-CCO", "nombre": "Contabilidad de Costos I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CEM" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "N-IAI", "nombre": "Inteligencia Artificial para la Innovación", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-GDA" ] },
+        { "id": "N-GCA", "nombre": "Gestión de la Calidad", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "N-CEC" ] },
+        { "id": "N-GMA", "nombre": "Gestión del Mantenimiento", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-CII" ] },
+        { "id": "N-IMK", "nombre": "Investigación de Mercados I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-EDE" ] },
+        { "id": "N-OU2", "nombre": "Operaciones Unitarias II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-OU1" ] },
+        { "id": "N-GTH", "nombre": "Gestión del Talento Humano I", "ht": 40, "hp": 60, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "N-MKD", "nombre": "Marketing Digital", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-IAI" ] },
+        { "id": "N-GCS", "nombre": "Gestión de la Cadena de Suministros", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "N-PM2" ] },
+        { "id": "N-CED", "nombre": "Circuitos Eléctricos y Digitales", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-ELT" ] },
+        { "id": "N-PI1", "nombre": "Procesos Industriales I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-OU1" ] },
+        { "id": "N-IFI", "nombre": "Ingeniería Financiera", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-CCO" ] },
+        { "id": "N-EL1", "nombre": "Electiva 1", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "N-AUT", "nombre": "Automatización Industrial", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-IAI" ] },
+        { "id": "N-SHO", "nombre": "Seguridad e Higiene Ocupacional", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-GMA" ] },
+        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-IMK" ] },
+        { "id": "N-PI2", "nombre": "Procesos Industriales II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-PI1" ] },
+        { "id": "N-PEP", "nombre": "Preparación y Evaluación de Proyectos", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "N-IFI" ] },
+        { "id": "N-EL2", "nombre": "Electiva 2", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "IX",
+      "materias": [
+        { "id": "N-IAR", "nombre": "Inteligencia Artificial y Robótica", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-AUT" ] },
+        { "id": "N-SNE", "nombre": "Sistemas Neumáticos", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "N-CED" ] },
+        { "id": "N-PLI", "nombre": "Producción Limpia", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "N-GPR", "nombre": "Gerencia de Proyectos", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "N-PEP" ] },
+        { "id": "N-GES", "nombre": "Gerencia Estratégica", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "N-GTH" ] },
+        { "id": "N-EL3", "nombre": "Electiva 3", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}
