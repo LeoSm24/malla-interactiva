@@ -44,6 +44,14 @@
       "planes": [
         { "id": "nuevo", "nombre": "Malla nueva", "archivo": "carreras/fisioterapia-kinesiologia/plan-nuevo.json" }
       ]
+    },
+    {
+      "id": "psicopedagogia",
+      "nombre": "Psicopedagogía",
+      "planPorDefecto": "antiguo",
+      "planes": [
+        { "id": "antiguo", "nombre": "Malla antigua", "archivo": "carreras/psicopedagogia/plan-antiguo.json" }
+      ]
     }
   ]
 }

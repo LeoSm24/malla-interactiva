@@ -1,0 +1,124 @@
+{
+  "carrera": "Psicopedagogía",
+  "plan": "Malla antigua",
+  "descripcion": "Plan anterior",
+  "mostrarCodigos": true,
+  "areas": [
+    { "id": "edu", "nombre": "Educativa", "color": "#f0dbd8" },
+    { "id": "cli", "nombre": "Clínica", "color": "#9ffecc" },
+    { "id": "soc", "nombre": "Sociocomunitaria", "color": "#f9d8c1" },
+    { "id": "rrhh", "nombre": "Recursos Humanos", "color": "#cbc1d9" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
+  "reglas": {
+    "mesesPorMateria": 1,
+    "duraciones": {
+      "MDG-01": 4,
+      "MDG-02": 2
+    },
+    "requiereHastaSemestre": {
+      "electiva": 5,
+      "practica": 5
+    }
+  },
+  "semestres": [
+    {
+      "nombre": "I",
+      "materias": [
+        { "id": "LIN-0170", "nombre": "Redacción y Estilo", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "PSP-0120", "nombre": "Taller de Expresión Artística", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "PSP-0140", "nombre": "Sistema Educativo Plurinacional", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "SOC-0100", "nombre": "Sociología", "area": "soc", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "area": "soc", "ht": 20, "hp": 80, "cr": 5, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "II",
+      "materias": [
+        { "id": "PSI-0145", "nombre": "Desarrollo Evolutivo I", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "LIN-0110" ] },
+        { "id": "PSP-0180", "nombre": "Gestión de Centros Educativos", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSP-0140" ] },
+        { "id": "PSP-0200", "nombre": "Introducción a la Psicopedagogía", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "PSP-0150", "nombre": "Modelos Pedagógicos", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSP-0140" ] },
+        { "id": "PSI-0120", "nombre": "Escuelas Psicológicas", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "SOC-0100" ] },
+        { "id": "PSI-0115", "nombre": "Psicobiología", "area": "cli", "ht": 80, "hp": 40, "cr": 6, "requiere": [] }
+      ]
+    },
+    {
+      "nombre": "III",
+      "materias": [
+        { "id": "PSI-0146", "nombre": "Desarrollo Evolutivo II", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0145" ] },
+        { "id": "PSP-0220", "nombre": "Estrategias Didácticas", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "PSP-0200" ] },
+        { "id": "PSP-0210", "nombre": "Didáctica General", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSP-0200" ] },
+        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "area": "soc", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "INV-0100" ] },
+        { "id": "SIS-0115", "nombre": "Informática Educativa", "area": "soc", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "PSI-0120" ] },
+        { "id": "PSI-0125", "nombre": "Neurología I", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0115" ] }
+      ]
+    },
+    {
+      "nombre": "IV",
+      "materias": [
+        { "id": "PSI-0220", "nombre": "Psicología Educativa", "area": "cli", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0146" ] },
+        { "id": "PSP-0240", "nombre": "Comunicación Educativa", "area": "rrhh", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSP-0220" ] },
+        { "id": "PSI-0110", "nombre": "Psicología Social I", "area": "rrhh", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "SOC-0100" ] },
+        { "id": "INV-0110", "nombre": "Métodos y Técnicas de Investigación Aplicada", "area": "soc", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "MAT-0200" ] },
+        { "id": "PSI-0235", "nombre": "Psicopatología", "area": "cli", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0125" ] },
+        { "id": "PSI-0126", "nombre": "Neurología II", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "PSI-0125" ] }
+      ]
+    },
+    {
+      "nombre": "V",
+      "materias": [
+        { "id": "PSI-0210", "nombre": "Psicología Cognitiva", "area": "cli", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0220" ] },
+        { "id": "PSI-0215", "nombre": "Comportamiento Organizacional", "area": "rrhh", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSP-0240" ] },
+        { "id": "PSP-0250", "nombre": "Educación para la Diversidad e Interculturalidad", "area": "edu", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0110" ] },
+        { "id": "INV-0120", "nombre": "Investigación Aplicada I", "area": "soc", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "INV-0110" ] },
+        { "id": "PSP-0300", "nombre": "Educación Especial I", "area": "cli", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "PSI-0235" ] },
+        { "id": "PSI-0230", "nombre": "Dificultades de Aprendizaje", "area": "cli", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0126" ] }
+      ]
+    },
+    {
+      "nombre": "VI",
+      "materias": [
+        { "id": "PSP-0260", "nombre": "Taller de Test Psicopedagógicos", "area": "cli", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "PSI-0210" ] },
+        { "id": "PSP-0350", "nombre": "Evaluación Psicopedagógica I", "area": "cli", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0210" ] },
+        { "id": "LIN-0210", "nombre": "Orientación Vocacional", "area": "edu", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "PSP-0250" ] },
+        { "id": "PSI-0310", "nombre": "Intervención Socio Comunitaria", "area": "edu", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "PSP-0250" ] },
+        { "id": "PSP-0301", "nombre": "Educación Especial II", "area": "cli", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSP-0300" ] },
+        { "id": "PSP-0270", "nombre": "Diagnóstico Psicopedagógico", "area": "cli", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSI-0230" ] }
+      ]
+    },
+    {
+      "nombre": "VII",
+      "materias": [
+        { "id": "PSP-0370", "nombre": "Diseño Curricular I", "area": "edu", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSP-0350" ] },
+        { "id": "PSP-0351", "nombre": "Evaluación Psicopedagógica II", "area": "soc", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSP-0350" ] },
+        { "id": "LIN-0250", "nombre": "Liderazgo y Dinámica de Grupos", "area": "rrhh", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "PSI-0215" ] },
+        { "id": "PSP-0400", "nombre": "Proyectos Educativos I", "area": "soc", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "PSI-0310" ] },
+        { "id": "ELE-0001", "nombre": "Electiva 1", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ELE-0002", "nombre": "Electiva 2", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "VIII",
+      "materias": [
+        { "id": "PSP-0420", "nombre": "Diseño Curricular II", "area": "edu", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSP-0370" ] },
+        { "id": "PSP-0430", "nombre": "Intervención Psicopedagógica", "area": "edu", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "PSP-0351" ] },
+        { "id": "ADM-0140", "nombre": "Gestión de Recursos Humanos", "area": "rrhh", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "LIN-0250" ] },
+        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "area": "rrhh", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "LIN-0250" ] },
+        { "id": "PSP-0410", "nombre": "Proyectos Educativos II", "area": "soc", "ht": 80, "hp": 60, "cr": 7, "requiere": [ "PSP-0400" ] },
+        { "id": "ELE-0003", "nombre": "Electiva 3", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" }
+      ]
+    },
+    {
+      "nombre": "Grado",
+      "materias": [
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
+      ]
+    }
+  ]
+}
