@@ -151,7 +151,7 @@ async function cargarPlan(nuevaCarreraId, nuevoPlanId) {
 
   // Descarga el JSON del plan (solo la primera vez)
   if (!cache[planInfo.archivo]) {
-    const resp = await fetch("data/" + planInfo.archivo);
+    const resp = await fetch("data/" + planInfo.archivo, { cache: "no-cache" }); // siempre la versión más reciente
     if (!resp.ok) throw new Error(`No se encontró data/${planInfo.archivo}`);
     cache[planInfo.archivo] = await resp.json();
   }
@@ -241,7 +241,7 @@ async function iniciar() {
   document.documentElement.dataset.theme = leer("malla:tema") || "dark";
   conectarEventos();
   migrarAvanceAnterior();
-  const resp = await fetch("data/carreras.json");
+  const resp = await fetch("data/carreras.json", { cache: "no-cache" });
   if (!resp.ok) throw new Error("No se encontró data/carreras.json");
   catalogo = await resp.json();
 
