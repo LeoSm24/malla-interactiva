@@ -3,6 +3,17 @@
   "plan": "Malla nueva",
   "descripcion": "Plan nuevo",
   "mostrarCodigos": false,
+  "areas": [
+    { "id": "cli", "nombre": "Clínica", "color": "#fcedbf" },
+    { "id": "edu", "nombre": "Educativa", "color": "#e0d6e9" },
+    { "id": "teo", "nombre": "Teorías y Sistemas de Psicología", "color": "#e3eaaa" },
+    { "id": "soc", "nombre": "Social", "color": "#f5baba" },
+    { "id": "neu", "nombre": "Neurociencia", "color": "#98d4e9" },
+    { "id": "inv", "nombre": "Investigación Aplicada en Psicología", "color": "#ededed" },
+    { "id": "tec", "nombre": "Técnica Instrumental", "color": "#b8b9dd" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
   "reglas": {
     "mesesPorMateria": 1,
     "duraciones": {
@@ -18,98 +29,98 @@
     {
       "nombre": "I",
       "materias": [
-        { "id": "N-IPS", "nombre": "Introducción a la Psicología", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
-        { "id": "N-DH1", "nombre": "Psicología del Desarrollo Humano I", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
-        { "id": "N-PAR", "nombre": "Paradigmas en Psicología", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
-        { "id": "N-PFI", "nombre": "Psicofisiología", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
-        { "id": "N-PER", "nombre": "Psicología de la Personalidad", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
-        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "ht": 40, "hp": 60, "cr": 5, "requiere": [] }
+        { "id": "N-IPS", "nombre": "Introducción a la Psicología", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-DH1", "nombre": "Psicología del Desarrollo Humano I", "area": "edu", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-PAR", "nombre": "Paradigmas en Psicología", "area": "teo", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-PFI", "nombre": "Psicofisiología", "area": "neu", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-PER", "nombre": "Psicología de la Personalidad", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "N-MIC", "nombre": "Metodología de la Investigación Científica", "area": "inv", "ht": 40, "hp": 60, "cr": 5, "requiere": [] }
       ]
     },
     {
       "nombre": "II",
       "materias": [
-        { "id": "N-PAN", "nombre": "Psicoanálisis", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-IPS" ] },
-        { "id": "N-DH2", "nombre": "Psicología del Desarrollo Humano II", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DH1" ] },
-        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
-        { "id": "N-FNE", "nombre": "Fundamentos de Neurociencia", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PFI" ] },
-        { "id": "N-LOR", "nombre": "Liderazgo y Oratoria", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
-        { "id": "N-IAD", "nombre": "Investigación y Análisis de Datos", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "N-MIC" ] }
+        { "id": "N-PAN", "nombre": "Psicoanálisis", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-IPS" ] },
+        { "id": "N-DH2", "nombre": "Psicología del Desarrollo Humano II", "area": "edu", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DH1" ] },
+        { "id": "N-ETI", "nombre": "Ética y Ciudadanía Global", "area": "edu", "ht": 50, "hp": 50, "cr": 5, "requiere": [] },
+        { "id": "N-FNE", "nombre": "Fundamentos de Neurociencia", "area": "neu", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PFI" ] },
+        { "id": "N-LOR", "nombre": "Liderazgo y Oratoria", "area": "edu", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "N-IAD", "nombre": "Investigación y Análisis de Datos", "area": "inv", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "N-MIC" ] }
       ]
     },
     {
       "nombre": "III",
       "materias": [
-        { "id": "N-PPA", "nombre": "Psicopatología", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAN" ] },
-        { "id": "N-PAP", "nombre": "Psicología del Aprendizaje", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DH2" ] },
-        { "id": "N-PSI", "nombre": "Psicología Sistémica", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAR" ] },
-        { "id": "N-PCC", "nombre": "Psicología Cognitivo Comportamental", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAR" ] },
-        { "id": "N-PSM", "nombre": "Psicometría", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PER" ] },
-        { "id": "N-IAP", "nombre": "Investigación Aplicada en Psicología", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-IAD" ] }
+        { "id": "N-PPA", "nombre": "Psicopatología", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAN" ] },
+        { "id": "N-PAP", "nombre": "Psicología del Aprendizaje", "area": "edu", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-DH2" ] },
+        { "id": "N-PSI", "nombre": "Psicología Sistémica", "area": "teo", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAR" ] },
+        { "id": "N-PCC", "nombre": "Psicología Cognitivo Comportamental", "area": "teo", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAR" ] },
+        { "id": "N-PSM", "nombre": "Psicometría", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PER" ] },
+        { "id": "N-IAP", "nombre": "Investigación Aplicada en Psicología", "area": "inv", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-IAD" ] }
       ]
     },
     {
       "nombre": "IV",
       "materias": [
-        { "id": "N-CL1", "nombre": "Psicología Clínica I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PPA" ] },
-        { "id": "N-TPR", "nombre": "Técnicas Proyectivas", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PAN" ] },
-        { "id": "N-PEX", "nombre": "Psicología Experimental", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-IAP" ] },
-        { "id": "N-SO1", "nombre": "Psicología Social I", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-ETI" ] },
-        { "id": "N-TTP", "nombre": "Taller de Técnicas Psicométricas", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PSM" ] },
-        { "id": "N-NPS", "nombre": "Neuropsicología", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-FNE" ] }
+        { "id": "N-CL1", "nombre": "Psicología Clínica I", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PPA" ] },
+        { "id": "N-TPR", "nombre": "Técnicas Proyectivas", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PAN" ] },
+        { "id": "N-PEX", "nombre": "Psicología Experimental", "area": "inv", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-IAP" ] },
+        { "id": "N-SO1", "nombre": "Psicología Social I", "area": "soc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-ETI" ] },
+        { "id": "N-TTP", "nombre": "Taller de Técnicas Psicométricas", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PSM" ] },
+        { "id": "N-NPS", "nombre": "Neuropsicología", "area": "neu", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-FNE" ] }
       ]
     },
     {
       "nombre": "V",
       "materias": [
-        { "id": "N-CL2", "nombre": "Psicología Clínica II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-CL1" ] },
-        { "id": "N-PED", "nombre": "Psicología Educativa", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAP" ] },
-        { "id": "N-TTR", "nombre": "Taller de Técnicas Proyectivas", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TPR" ] },
-        { "id": "N-SO2", "nombre": "Psicología Social II", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-SO1" ] },
-        { "id": "N-TEO", "nombre": "Técnicas de Entrevista y Observación Psicológica", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TTP" ] },
-        { "id": "N-TND", "nombre": "Trastornos del Neurodesarrollo", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-NPS" ] }
+        { "id": "N-CL2", "nombre": "Psicología Clínica II", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-CL1" ] },
+        { "id": "N-PED", "nombre": "Psicología Educativa", "area": "edu", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-PAP" ] },
+        { "id": "N-TTR", "nombre": "Taller de Técnicas Proyectivas", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TPR" ] },
+        { "id": "N-SO2", "nombre": "Psicología Social II", "area": "soc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-SO1" ] },
+        { "id": "N-TEO", "nombre": "Técnicas de Entrevista y Observación Psicológica", "area": "tec", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TTP" ] },
+        { "id": "N-TND", "nombre": "Trastornos del Neurodesarrollo", "area": "neu", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-NPS" ] }
       ]
     },
     {
       "nombre": "VI",
       "materias": [
-        { "id": "N-PDG", "nombre": "Psicodiagnóstico", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TTR" ] },
-        { "id": "N-EIP", "nombre": "Estrategias de Intervención Psicoeducativas", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-PED" ] },
-        { "id": "N-PSA", "nombre": "Psicología de la Salud Mental", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-CL2" ] },
-        { "id": "N-FTP", "nombre": "Fundamentos de Terapias Psicológicas", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-CL2" ] },
-        { "id": "N-POR", "nombre": "Psicología Organizacional", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-SO2" ] },
-        { "id": "N-PCO", "nombre": "Psicología Comunitaria", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-SO2" ] }
+        { "id": "N-PDG", "nombre": "Psicodiagnóstico", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TTR" ] },
+        { "id": "N-EIP", "nombre": "Estrategias de Intervención Psicoeducativas", "area": "edu", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-PED" ] },
+        { "id": "N-PSA", "nombre": "Psicología de la Salud Mental", "area": "neu", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-CL2" ] },
+        { "id": "N-FTP", "nombre": "Fundamentos de Terapias Psicológicas", "area": "teo", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-CL2" ] },
+        { "id": "N-POR", "nombre": "Psicología Organizacional", "area": "soc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-SO2" ] },
+        { "id": "N-PCO", "nombre": "Psicología Comunitaria", "area": "soc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-SO2" ] }
       ]
     },
     {
       "nombre": "VII",
       "materias": [
-        { "id": "N-PEM", "nombre": "Psicología de Emergencias", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-FTP" ] },
-        { "id": "N-ICC", "nombre": "Intervención Cognitivo Comportamental", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-PCC" ] },
-        { "id": "N-TIS", "nombre": "Técnicas de Intervención Sistémica", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-PSI" ] },
-        { "id": "N-PEI", "nombre": "Prácticas Educativas Inclusivas", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-EIP" ] },
-        { "id": "N-GTH", "nombre": "Gestión del Talento Humano I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-POR" ] },
-        { "id": "N-EL1", "nombre": "Electiva 1", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+        { "id": "N-PEM", "nombre": "Psicología de Emergencias", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-FTP" ] },
+        { "id": "N-ICC", "nombre": "Intervención Cognitivo Comportamental", "area": "cli", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-PCC" ] },
+        { "id": "N-TIS", "nombre": "Técnicas de Intervención Sistémica", "area": "cli", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-PSI" ] },
+        { "id": "N-PEI", "nombre": "Prácticas Educativas Inclusivas", "area": "edu", "ht": 30, "hp": 70, "cr": 5, "requiere": [ "N-EIP" ] },
+        { "id": "N-GTH", "nombre": "Gestión del Talento Humano I", "area": "inv", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-POR" ] },
+        { "id": "N-EL1", "nombre": "Electiva 1", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
       ]
     },
     {
       "nombre": "VIII",
       "materias": [
-        { "id": "N-PFO", "nombre": "Psicología Forense", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-CL2" ] },
-        { "id": "N-EPE", "nombre": "Enfoques Psicológicos Emergentes", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PEM" ] },
-        { "id": "N-BPD", "nombre": "Bases de Psicoterapia en Entornos Digitales", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TIS" ] },
-        { "id": "N-DPP", "nombre": "Diseño de Proyectos Psicosociales", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PCO" ] },
-        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-GTH" ] },
-        { "id": "N-EL2", "nombre": "Electiva 2", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+        { "id": "N-PFO", "nombre": "Psicología Forense", "area": "cli", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "N-CL2" ] },
+        { "id": "N-EPE", "nombre": "Enfoques Psicológicos Emergentes", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PEM" ] },
+        { "id": "N-BPD", "nombre": "Bases de Psicoterapia en Entornos Digitales", "area": "cli", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-TIS" ] },
+        { "id": "N-DPP", "nombre": "Diseño de Proyectos Psicosociales", "area": "inv", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "N-PCO" ] },
+        { "id": "N-EMP", "nombre": "Emprende\u00ADdurismo e Innovación", "area": "inv", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "N-GTH" ] },
+        { "id": "N-EL2", "nombre": "Electiva 2", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
       ]
     },
     {
       "nombre": "Grado",
       "materias": [
-        { "id": "PRA-01", "nombre": "Práctica Profesional I", "tipo": "practica", "requiere": [] },
-        { "id": "PRA-02", "nombre": "Práctica Profesional II", "tipo": "practica", "requiere": [ "PRA-01" ] },
-        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
-        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
       ]
     }
   ]

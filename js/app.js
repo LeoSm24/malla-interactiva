@@ -4,9 +4,9 @@
    - Maneja los selectores de carrera y plan
    - Conecta los clics con las reglas y el dibujo
    ========================================================= */
-import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=7";
-import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=7";
-import { dibujarMalla, pintarEstados, enfocar, tarjeta } from "./malla.js?v=7";
+import { leer, guardar, leerAvance, guardarAvance } from "./storage.js?v=8";
+import { crearModelo, estado, disponible, aprobar, desaprobar, mesesRestantes, planMesAMes } from "./reglas.js?v=8";
+import { dibujarMalla, dibujarLeyenda, colorArea, pintarEstados, enfocar, tarjeta } from "./malla.js?v=8";
 
 const $ = id => document.getElementById(id);
 const grid = $("grid"), svg = $("links"), info = $("info");
@@ -82,11 +82,11 @@ function actualizar() {
       const desde = sumarMeses(p.desde), hasta = sumarMeses(p.hasta), ultimo = i === plan.length - 1;
       const cuando = p.meses > 1 ? `${MESES[desde.getMonth()]}–${fmtMes(hasta)}` : fmtMes(desde);
       return `<li class="${i === 0 ? "go" : ""} ${ultimo ? "last" : ""}"><span>${cuando}</span>
-        <b>${nombre(p.id)}${p.meses > 1 ? ` <em>· ${p.meses} meses</em>` : ""}${ultimo ? " 🎓" : ""}</b></li>`;
+        <b style="--area:${colorArea(modelo, p.id)}"><i></i>${nombre(p.id)}${p.meses > 1 ? ` <em>· ${p.meses} meses</em>` : ""}${ultimo ? " 🎓" : ""}</b></li>`;
     }).join("");
   }
   $("nowLabel").style.display = ahora.length ? "" : "none";
-  $("nowList").innerHTML = ahora.map(id => `<button class="chip" data-code="${id}">${nombre(id)}</button>`).join("");
+  $("nowList").innerHTML = ahora.map(id => `<button class="chip" data-code="${id}" style="--area:${colorArea(modelo, id)}">${nombre(id)}</button>`).join("");
 }
 
 const foco = id => enfocar(grid, svg, info, modelo, aprobadas, id);
@@ -172,6 +172,7 @@ async function cargarPlan(nuevaCarreraId, nuevoPlanId) {
   $("status").style.display = "none";
 
   dibujarMalla(grid, modelo);
+  dibujarLeyenda($("areas"), grid, modelo);
   actualizar();
   foco(null);
   repetir(grid, "switching");

@@ -3,6 +3,12 @@
   "plan": "Malla nueva",
   "descripcion": "Plan 2025",
   "mostrarCodigos": true,
+  "areas": [
+    { "id": "cb", "nombre": "Ciencias Básicas", "color": "#cddb7b" },
+    { "id": "ia", "nombre": "Ingeniería Aplicada", "color": "#cbe8f8" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
   "reglas": {
     "mesesPorMateria": 1,
     "duraciones": { "MDG-01": 4, "MDG-02": 2 },
@@ -12,24 +18,24 @@
     {
       "nombre": "I",
       "materias": [
-        { "id": "MAT-0100", "nombre": "Matemática I", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
-        { "id": "PRG-0100", "nombre": "Programación I", "ht": 40, "hp": 80, "cr": 6, "requiere": [] }
+        { "id": "MAT-0100", "nombre": "Matemática I", "area": "cb", "ht": 40, "hp": 60, "cr": 5, "requiere": [] },
+        { "id": "PRG-0100", "nombre": "Programación I", "area": "ia", "ht": 40, "hp": 80, "cr": 6, "requiere": [] }
       ]
     },
     {
       "nombre": "II",
       "materias": [
-        { "id": "MAT-0200", "nombre": "Matemática II", "ht": 40, "hp": 60, "cr": 5, "requiere": ["MAT-0100"] },
-        { "id": "ELE-0001", "nombre": "Electiva 1", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
+        { "id": "MAT-0200", "nombre": "Matemática II", "area": "cb", "ht": 40, "hp": 60, "cr": 5, "requiere": ["MAT-0100"] },
+        { "id": "ELE-0001", "nombre": "Electiva 1", "area": "electiva", "ht": 40, "hp": 40, "cr": 4, "tipo": "electiva" }
       ]
     },
     {
       "nombre": "Grado",
       "materias": [
-        { "id": "PRA-01", "nombre": "Práctica Profesional I", "tipo": "practica", "requiere": [] },
-        { "id": "PRA-02", "nombre": "Práctica Profesional II", "tipo": "practica", "requiere": ["PRA-01"] },
-        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": ["PRA-01", "PRA-02"] },
-        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": ["PRA-01", "PRA-02"] }
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": ["PRA-01"] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": ["PRA-01", "PRA-02"] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": ["PRA-01", "PRA-02"] }
       ]
     }
   ]

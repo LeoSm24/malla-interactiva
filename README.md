@@ -59,6 +59,7 @@ Listo: aparece en el selector de carreras, con un botón por cada plan.
 |---|---|
 | `descripcion` | Texto bajo el título (ej. "Plan 320-04") |
 | `mostrarCodigos` | `true` muestra el código de la materia; `false` muestra los créditos |
+| `areas` | Áreas de la malla con su nombre y color, ej. `{ "id": "cb", "nombre": "Ciencias Básicas", "color": "#cddb7b" }`. Aparecen en la leyenda |
 | `reglas.mesesPorMateria` | Meses que dura cada materia (por defecto 1) |
 | `reglas.duraciones` | Materias con otra duración, ej. `{ "MDG-01": 4 }` |
 | `reglas.requiereHastaSemestre` | Por tipo de materia, hasta qué semestre hay que aprobar todo. Ej. `{ "electiva": 5, "practica": 5 }` |
@@ -67,10 +68,11 @@ Listo: aparece en el selector de carreras, con un botón por cada plan.
 Cada materia:
 
 ```json
-{ "id": "SIS-0121", "nombre": "Programación I", "ht": 40, "hp": 60, "cr": 5, "requiere": ["SIS-0120"] }
+{ "id": "SIS-0121", "nombre": "Programación I", "area": "sis", "ht": 40, "hp": 60, "cr": 5, "requiere": ["SIS-0120"] }
 ```
 
 - `id`: único dentro del plan. Es lo que se usa en `requiere`.
+- `area`: `id` de su área en `areas`; define el color de la tarjeta (el mismo de la malla original).
 - `requiere`: lista de `id` que hay que aprobar antes.
 - `"tipo": "electiva"` o `"tipo": "practica"`: la materia sigue la regla `requiereHastaSemestre` de su tipo.
   Puede tener además su propio `requiere` (ej. Práctica II también pide Práctica I).

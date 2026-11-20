@@ -4,7 +4,7 @@
    - Colores según estado
    - Líneas de conexión al pasar el mouse
    ========================================================= */
-import { estado } from "./reglas.js?v=7";
+import { estado } from "./reglas.js?v=8";
 
 const ICONOS = {
   locked: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
@@ -19,8 +19,10 @@ const tituloSemestre = nombre => /^[IVXL]+$/.test(nombre) ? `SEMESTRE ${nombre}`
 /* Dibuja todas las columnas y tarjetas de un plan */
 export function dibujarMalla(grid, modelo) {
   grid.querySelectorAll(".col").forEach(c => c.remove());
-  grid.style.gridTemplateColumns = `repeat(${modelo.plan.semestres.length}, minmax(132px, 1fr))`;
-  grid.style.minWidth = `${modelo.plan.semestres.length * 150}px`;
+  grid.style.gridTemplateColumns = `repeat(${modelo.plan.semestres.length}, minmax(140px, 1fr))`;
+  grid.style.minWidth = `${modelo.plan.semestres.length * 158}px`;
+
+  const colorDe = Object.fromEntries((modelo.plan.areas || []).map(a => [a.id, a.color]));
 
   modelo.plan.semestres.forEach((sem, i) => {
     const col = document.createElement("div");
@@ -31,7 +33,8 @@ export function dibujarMalla(grid, modelo) {
         modelo.plan.mostrarCodigos ? m.id : (m.cr ? `${m.cr} créditos` : ""),
         meses > 1 ? `${meses} meses` : "",
       ].filter(Boolean).join(" · ");
-      return `<div class="card" data-code="${m.id}">
+      const color = colorDe[m.area] ? ` style="--area:${colorDe[m.area]}"` : "";
+      return `<div class="card" data-code="${m.id}" data-area="${m.area || ""}"${color}>
         <span class="ico-slot"></span>
         <div class="name">${m.nombre}</div>
         <div class="code">${detalle}</div>
@@ -41,6 +44,26 @@ export function dibujarMalla(grid, modelo) {
     grid.appendChild(col);
   });
 }
+
+/* Leyenda de áreas: al pasar el mouse resalta sus materias */
+export function dibujarLeyenda(contenedor, grid, modelo) {
+  const areas = modelo.plan.areas || [];
+  const cuenta = id => modelo.ids.filter(x => modelo.materias[x].area === id).length;
+  contenedor.innerHTML = areas.filter(a => cuenta(a.id))
+    .map(a => `<span class="area-chip" data-area="${a.id}" style="--c:${a.color}"><i></i>${a.nombre} <small>${cuenta(a.id)}</small></span>`).join("");
+  contenedor.style.display = areas.length ? "" : "none";
+  contenedor.onmouseover = e => {
+    const chip = e.target.closest(".area-chip");
+    if (!chip) return;
+    grid.classList.add("by-area");
+    grid.querySelectorAll(".card").forEach(c => c.classList.toggle("in-area", c.dataset.area === chip.dataset.area));
+  };
+  contenedor.onmouseleave = () => grid.classList.remove("by-area");
+}
+
+/* Color de un área (para la lista de pendientes y el plan mes a mes) */
+export const colorArea = (modelo, id) =>
+  (modelo.plan.areas || []).find(a => a.id === modelo.materias[id].area)?.color || "transparent";
 
 /* Actualiza colores e íconos según lo aprobado */
 export function pintarEstados(grid, modelo, aprobadas) {

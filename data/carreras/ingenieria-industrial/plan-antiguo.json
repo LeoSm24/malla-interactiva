@@ -3,6 +3,22 @@
   "plan": "Malla antigua",
   "descripcion": "Plan anterior",
   "mostrarCodigos": true,
+  "areas": [
+    { "id": "mat", "nombre": "Matemáticas", "color": "#f2dcda" },
+    { "id": "fis", "nombre": "Física", "color": "#ebf1df" },
+    { "id": "qmc", "nombre": "Química", "color": "#ddd6e5" },
+    { "id": "gpr", "nombre": "Gestión de la Producción", "color": "#91ffc2" },
+    { "id": "gic", "nombre": "Gestión Integrada de la Calidad", "color": "#fbd7bb" },
+    { "id": "gep", "nombre": "Gerencia de Proyectos", "color": "#d8d8d8" },
+    { "id": "fin", "nombre": "Finanzas", "color": "#c4d6a0" },
+    { "id": "aut", "nombre": "Automatización Industrial y Robótica", "color": "#ffe28c" },
+    { "id": "smi", "nombre": "Seguridad y Mantenimiento Industrial", "color": "#d9958f" },
+    { "id": "rrhh", "nombre": "Gestión de Recursos Humanos", "color": "#c6d8f0" },
+    { "id": "adm", "nombre": "Administrativa", "color": "#f9bc8a" },
+    { "id": "mab", "nombre": "Medio Ambiente", "color": "#00b050" },
+    { "id": "electiva", "nombre": "Electivas", "color": "#ffffff" },
+    { "id": "grado", "nombre": "Requisitos de grado", "color": "#d6d3d1" }
+  ],
   "reglas": {
     "mesesPorMateria": 1,
     "duraciones": {
@@ -18,109 +34,109 @@
     {
       "nombre": "I",
       "materias": [
-        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
-        { "id": "MAT-0100", "nombre": "Fundamentos de Matemáticas", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
-        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
-        { "id": "FIS-0100", "nombre": "Física I", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
-        { "id": "ECO-0100", "nombre": "Introducción a la Economía", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
-        { "id": "QMC-0100", "nombre": "Química General e Inorgánica", "ht": 60, "hp": 40, "cr": 5, "requiere": [] }
+        { "id": "LIN-0110", "nombre": "Deontología y Prosocialidad", "area": "adm", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "MAT-0100", "nombre": "Fundamentos de Matemáticas", "area": "mat", "ht": 40, "hp": 80, "cr": 6, "requiere": [] },
+        { "id": "INV-0100", "nombre": "Técnicas de Investigación", "area": "gic", "ht": 20, "hp": 80, "cr": 5, "requiere": [] },
+        { "id": "FIS-0100", "nombre": "Física I", "area": "fis", "ht": 60, "hp": 40, "cr": 5, "requiere": [] },
+        { "id": "ECO-0100", "nombre": "Introducción a la Economía", "area": "fin", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "QMC-0100", "nombre": "Química General e Inorgánica", "area": "qmc", "ht": 60, "hp": 40, "cr": 5, "requiere": [] }
       ]
     },
     {
       "nombre": "II",
       "materias": [
-        { "id": "MAT-0120", "nombre": "Cálculo I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0100" ] },
-        { "id": "MAT-0110", "nombre": "Álgebra Lineal", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0100" ] },
-        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "INV-0100" ] },
-        { "id": "FIS-0200", "nombre": "Física II", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0100" ] },
-        { "id": "CPA-0100", "nombre": "Contabilidad Empresarial I", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "ECO-0100" ] },
-        { "id": "QMC-0200", "nombre": "Química Orgánica", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "QMC-0100" ] }
+        { "id": "MAT-0120", "nombre": "Cálculo I", "area": "mat", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0100" ] },
+        { "id": "MAT-0110", "nombre": "Álgebra Lineal", "area": "mat", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0100" ] },
+        { "id": "MAT-0200", "nombre": "Estadística Descriptiva", "area": "gic", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "INV-0100" ] },
+        { "id": "FIS-0200", "nombre": "Física II", "area": "fis", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0100" ] },
+        { "id": "CPA-0100", "nombre": "Contabilidad Empresarial I", "area": "fin", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "ECO-0100" ] },
+        { "id": "QMC-0200", "nombre": "Química Orgánica", "area": "qmc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "QMC-0100" ] }
       ]
     },
     {
       "nombre": "III",
       "materias": [
-        { "id": "MAT-0121", "nombre": "Cálculo II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0120" ] },
-        { "id": "IND-0130", "nombre": "Dibujo Industrial Computarizado", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "MAT-0110" ] },
-        { "id": "MAT-0210", "nombre": "Estadística Inferencial", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0200" ] },
-        { "id": "FIS-0400", "nombre": "Electrotecnia Industrial", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0200" ] },
-        { "id": "CPA-0200", "nombre": "Contabilidad de Costos I", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "CPA-0100" ] },
-        { "id": "ADM-0100", "nombre": "Administración I", "ht": 60, "hp": 40, "cr": 5, "requiere": [] }
+        { "id": "MAT-0121", "nombre": "Cálculo II", "area": "mat", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAT-0120" ] },
+        { "id": "IND-0130", "nombre": "Dibujo Industrial Computarizado", "area": "aut", "ht": 20, "hp": 80, "cr": 5, "requiere": [ "MAT-0110" ] },
+        { "id": "MAT-0210", "nombre": "Estadística Inferencial", "area": "gic", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0200" ] },
+        { "id": "FIS-0400", "nombre": "Electrotecnia Industrial", "area": "aut", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0200" ] },
+        { "id": "CPA-0200", "nombre": "Contabilidad de Costos I", "area": "fin", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "CPA-0100" ] },
+        { "id": "ADM-0100", "nombre": "Administración I", "area": "adm", "ht": 60, "hp": 40, "cr": 5, "requiere": [] }
       ]
     },
     {
       "nombre": "IV",
       "materias": [
-        { "id": "SIS-0328", "nombre": "Programación Numérica y Aplicaciones", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0121" ] },
-        { "id": "IND-0300", "nombre": "Gestión de la Calidad I", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "MAT-0200" ] },
-        { "id": "ADM-0200", "nombre": "Investigación de Mercado I", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "MAT-0200" ] },
-        { "id": "MAT-0300", "nombre": "Investigación Operativa I", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "MAT-0210" ] },
-        { "id": "FIS-0300", "nombre": "Mecánica de Fluidos", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0200" ] },
-        { "id": "IND-0100", "nombre": "Producción y Manufactura Flexible I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "ADM-0100" ] }
+        { "id": "SIS-0328", "nombre": "Programación Numérica y Aplicaciones", "area": "aut", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "MAT-0121" ] },
+        { "id": "IND-0300", "nombre": "Gestión de la Calidad I", "area": "gic", "ht": 80, "hp": 40, "cr": 6, "requiere": [ "MAT-0200" ] },
+        { "id": "ADM-0200", "nombre": "Investigación de Mercado I", "area": "gep", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "MAT-0200" ] },
+        { "id": "MAT-0300", "nombre": "Investigación Operativa I", "area": "rrhh", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "MAT-0210" ] },
+        { "id": "FIS-0300", "nombre": "Mecánica de Fluidos", "area": "fis", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0200" ] },
+        { "id": "IND-0100", "nombre": "Producción y Manufactura Flexible I", "area": "gpr", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "ADM-0100" ] }
       ]
     },
     {
       "nombre": "V",
       "materias": [
-        { "id": "IND-0120", "nombre": "Ingeniería de Métodos y Ergonomía", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0300" ] },
-        { "id": "INV-0110", "nombre": "Métodos y Técnicas de Investigación Aplicada", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "ADM-0200" ] },
-        { "id": "IND-0135", "nombre": "Construcciones e Instalaciones Industriales", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0400" ] },
-        { "id": "QMC-0300", "nombre": "Termodinámica", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0300" ] },
-        { "id": "QMC-0400", "nombre": "Operaciones Unitarias I", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "IND-0100" ] },
-        { "id": "IND-0101", "nombre": "Producción y Manufactura Flexible II", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "IND-0100" ] }
+        { "id": "IND-0120", "nombre": "Ingeniería de Métodos y Ergonomía", "area": "aut", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0300" ] },
+        { "id": "INV-0110", "nombre": "Métodos y Técnicas de Investigación Aplicada", "area": "gep", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "ADM-0200" ] },
+        { "id": "IND-0135", "nombre": "Construcciones e Instalaciones Industriales", "area": "aut", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0400" ] },
+        { "id": "QMC-0300", "nombre": "Termodinámica", "area": "fis", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "FIS-0300" ] },
+        { "id": "QMC-0400", "nombre": "Operaciones Unitarias I", "area": "qmc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "IND-0100" ] },
+        { "id": "IND-0101", "nombre": "Producción y Manufactura Flexible II", "area": "gpr", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "IND-0100" ] }
       ]
     },
     {
       "nombre": "VI",
       "materias": [
-        { "id": "MAB-0100", "nombre": "Medio Ambiente y Desarrollo Sostenible", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
-        { "id": "IND-0301", "nombre": "Gestión de la Calidad II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0300" ] },
-        { "id": "MAT-0301", "nombre": "Investigación Operativa II", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "MAT-0300" ] },
-        { "id": "ECO-0235", "nombre": "Ingeniería Económica", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "CPA-0200" ] },
-        { "id": "QMC-0401", "nombre": "Operaciones Unitarias II", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "QMC-0400" ] },
-        { "id": "IND-0200", "nombre": "Procesos Industriales I", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "QMC-0400" ] }
+        { "id": "MAB-0100", "nombre": "Medio Ambiente y Desarrollo Sostenible", "area": "gic", "ht": 80, "hp": 20, "cr": 5, "requiere": [] },
+        { "id": "IND-0301", "nombre": "Gestión de la Calidad II", "area": "gic", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0300" ] },
+        { "id": "MAT-0301", "nombre": "Investigación Operativa II", "area": "rrhh", "ht": 60, "hp": 60, "cr": 6, "requiere": [ "MAT-0300" ] },
+        { "id": "ECO-0235", "nombre": "Ingeniería Económica", "area": "fin", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "CPA-0200" ] },
+        { "id": "QMC-0401", "nombre": "Operaciones Unitarias II", "area": "qmc", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "QMC-0400" ] },
+        { "id": "IND-0200", "nombre": "Procesos Industriales I", "area": "gpr", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "QMC-0400" ] }
       ]
     },
     {
       "nombre": "VII",
       "materias": [
-        { "id": "IND-0310", "nombre": "Gestión del Mantenimiento", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0135" ] },
-        { "id": "FIS-0410", "nombre": "Circuitos Eléctricos y Digitales", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "SIS-0328" ] },
-        { "id": "ELE-0001", "nombre": "Electiva 1", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
-        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "ht": 40, "hp": 80, "cr": 5, "requiere": [ "ECO-0235" ] },
-        { "id": "PSI-0215", "nombre": "Comportamiento Organizacional", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "IND-0101" ] },
-        { "id": "IND-0201", "nombre": "Procesos Industriales II", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0200" ] }
+        { "id": "IND-0310", "nombre": "Gestión del Mantenimiento", "area": "smi", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0135" ] },
+        { "id": "FIS-0410", "nombre": "Circuitos Eléctricos y Digitales", "area": "aut", "ht": 60, "hp": 40, "cr": 5, "requiere": [ "SIS-0328" ] },
+        { "id": "ELE-0001", "nombre": "Electiva 1", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ADM-0420", "nombre": "Emprende\u00ADdurismo", "area": "adm", "ht": 40, "hp": 80, "cr": 5, "requiere": [ "ECO-0235" ] },
+        { "id": "PSI-0215", "nombre": "Comportamiento Organizacional", "area": "rrhh", "ht": 80, "hp": 20, "cr": 5, "requiere": [ "IND-0101" ] },
+        { "id": "IND-0201", "nombre": "Procesos Industriales II", "area": "gpr", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "IND-0200" ] }
       ]
     },
     {
       "nombre": "VIII",
       "materias": [
-        { "id": "IND-0320", "nombre": "Seguridad e Higiene Ocupacional", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "IND-0310" ] },
-        { "id": "IND-0110", "nombre": "Producción Limpia", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAB-0100" ] },
-        { "id": "IND-0500", "nombre": "Automatización Industrial", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "FIS-0410" ] },
-        { "id": "IND-0510", "nombre": "Neumática Aplicada", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "FIS-0410" ] },
-        { "id": "IND-0400", "nombre": "Preparación y Evaluación de Proyectos I", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "ADM-0420" ] },
-        { "id": "ADM-0140", "nombre": "Gestión de Recursos Humanos", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "PSI-0215" ] }
+        { "id": "IND-0320", "nombre": "Seguridad e Higiene Ocupacional", "area": "smi", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "IND-0310" ] },
+        { "id": "IND-0110", "nombre": "Producción Limpia", "area": "mab", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "MAB-0100" ] },
+        { "id": "IND-0500", "nombre": "Automatización Industrial", "area": "aut", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "FIS-0410" ] },
+        { "id": "IND-0510", "nombre": "Neumática Aplicada", "area": "aut", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "FIS-0410" ] },
+        { "id": "IND-0400", "nombre": "Preparación y Evaluación de Proyectos I", "area": "gep", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "ADM-0420" ] },
+        { "id": "ADM-0140", "nombre": "Gestión de Recursos Humanos", "area": "rrhh", "ht": 40, "hp": 80, "cr": 6, "requiere": [ "PSI-0215" ] }
       ]
     },
     {
       "nombre": "IX",
       "materias": [
-        { "id": "ELE-0002", "nombre": "Electiva 2", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
-        { "id": "ELE-0003", "nombre": "Electiva 3", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
-        { "id": "ELE-0004", "nombre": "Electiva 4", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
-        { "id": "IND-0520", "nombre": "Robótica", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "IND-0510" ] },
-        { "id": "IND-0401", "nombre": "Preparación y Evaluación de Proyectos II", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "IND-0400" ] },
-        { "id": "ADM-0360", "nombre": "Gerencia Estratégica Empresarial", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "ADM-0140" ] }
+        { "id": "ELE-0002", "nombre": "Electiva 2", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ELE-0003", "nombre": "Electiva 3", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "ELE-0004", "nombre": "Electiva 4", "area": "electiva", "ht": 80, "hp": 20, "cr": 5, "tipo": "electiva" },
+        { "id": "IND-0520", "nombre": "Robótica", "area": "aut", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "IND-0510" ] },
+        { "id": "IND-0401", "nombre": "Preparación y Evaluación de Proyectos II", "area": "gep", "ht": 60, "hp": 80, "cr": 7, "requiere": [ "IND-0400" ] },
+        { "id": "ADM-0360", "nombre": "Gerencia Estratégica Empresarial", "area": "adm", "ht": 40, "hp": 60, "cr": 5, "requiere": [ "ADM-0140" ] }
       ]
     },
     {
       "nombre": "Grado",
       "materias": [
-        { "id": "PRA-01", "nombre": "Práctica Profesional I", "tipo": "practica", "requiere": [] },
-        { "id": "PRA-02", "nombre": "Práctica Profesional II", "tipo": "practica", "requiere": [ "PRA-01" ] },
-        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "requiere": [ "PRA-01", "PRA-02" ] },
-        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "requiere": [ "PRA-01", "PRA-02" ] }
+        { "id": "PRA-01", "nombre": "Práctica Profesional I", "area": "grado", "tipo": "practica", "requiere": [] },
+        { "id": "PRA-02", "nombre": "Práctica Profesional II", "area": "grado", "tipo": "practica", "requiere": [ "PRA-01" ] },
+        { "id": "MDG-01", "nombre": "Modalidad de Grado I", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] },
+        { "id": "MDG-02", "nombre": "Modalidad de Grado II", "area": "grado", "requiere": [ "PRA-01", "PRA-02" ] }
       ]
     }
   ]
