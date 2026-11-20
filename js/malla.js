@@ -4,7 +4,7 @@
    - Colores según estado
    - Líneas de conexión al pasar el mouse
    ========================================================= */
-import { estado } from "./reglas.js";
+import { estado } from "./reglas.js?v=5";
 
 const ICONOS = {
   locked: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',

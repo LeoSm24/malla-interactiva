@@ -79,6 +79,17 @@ Cada materia:
 > Si escribes mal un `id` en `requiere`, la consola del navegador (F12) muestra un aviso
 > indicando qué materia pide algo que no existe.
 
+## Al cambiar CSS o JavaScript: sube la versión
+
+Los navegadores guardan en caché los archivos `.css` y `.js`. Para que todos vean tu cambio,
+sube el número de versión **en todos estos lugares** (ej. de `?v=5` a `?v=6`):
+
+- `index.html` → `css/styles.css?v=…` y `js/app.js?v=…`
+- `js/app.js` → los tres `import … from "./….js?v=…"`
+- `js/malla.js` → `import … from "./reglas.js?v=…"`
+
+Los archivos de `data/` no necesitan esto: siempre se leen sin caché.
+
 ## Links directos
 
 Cada malla tiene su propio link: `index.html#ingenieria-sistemas--nuevo`.
